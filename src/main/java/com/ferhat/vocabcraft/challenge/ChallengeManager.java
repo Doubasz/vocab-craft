@@ -1,10 +1,13 @@
 package com.ferhat.vocabcraft.challenge;
 
 import com.ferhat.vocabcraft.config.VocabCraftConfig;
+import com.ferhat.vocabcraft.net.ChallengeResultPayload;
+import com.ferhat.vocabcraft.net.ChallengeStartPayload;
 import com.ferhat.vocabcraft.penalty.HeartPenalty;
 import com.ferhat.vocabcraft.penalty.Penalty;
 import com.ferhat.vocabcraft.vocab.StarterWords;
 import com.ferhat.vocabcraft.vocab.VocabEntry;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -58,7 +61,7 @@ public final class ChallengeManager {
 					active.remove(id);
 					scheduler.scheduleNext(id, now);
 				} else if (now > challenge.deadlineTick()) {
-					fail(player, challenge, "Time's up!", now);
+					fail(player, challenge, "Time's up!", "", now);
 				}
 			} else if (scheduler.isDue(id, now)) {
 				if (canReceiveChallenge(player)) {
@@ -91,6 +94,12 @@ public final class ChallengeManager {
 		Challenge challenge = new Challenge(entry, direction, deadline, config.showKanaHint);
 		active.put(player.getUUID(), challenge);
 
+		if (ServerPlayNetworking.canSend(player, ChallengeStartPayload.TYPE)) {
+			ServerPlayNetworking.send(player, new ChallengeStartPayload(
+					direction == Direction.EN_TO_JP, challenge.prompt(), timeLimit * VocabCraftConfig.TICKS_PER_SECOND));
+			return true;
+		}
+		// Client without the mod: fall back to a chat prompt.
 		String instruction = direction == Direction.EN_TO_JP ? "Say it in Japanese: " : "Say it in English: ";
 		player.sendSystemMessage(prefix()
 				.append(Component.literal(instruction).withStyle(ChatFormatting.YELLOW))
@@ -115,28 +124,37 @@ public final class ChallengeManager {
 			return true;
 		}
 		if (challenge.isCorrect(text)) {
-			succeed(player, challenge, now);
+			succeed(player, challenge, text, now);
 		} else {
-			fail(player, challenge, "Wrong!", now);
+			fail(player, challenge, "Wrong!", text, now);
 		}
 		return true;
 	}
 
-	private void succeed(ServerPlayer player, Challenge challenge, long now) {
+	private void succeed(ServerPlayer player, Challenge challenge, String answer, long now) {
 		active.remove(player.getUUID());
+		sendResult(player, true, answer, challenge);
 		player.sendSystemMessage(prefix()
 				.append(Component.literal("✓ Correct! ").withStyle(ChatFormatting.GREEN))
 				.append(Component.literal(challenge.solution()).withStyle(ChatFormatting.GRAY)));
 		scheduler.scheduleNext(player.getUUID(), now);
 	}
 
-	private void fail(ServerPlayer player, Challenge challenge, String reason, long now) {
+	private void fail(ServerPlayer player, Challenge challenge, String reason, String answer, long now) {
 		active.remove(player.getUUID());
+		sendResult(player, false, answer, challenge);
 		player.sendSystemMessage(prefix()
 				.append(Component.literal("✗ " + reason + " ").withStyle(ChatFormatting.RED))
 				.append(Component.literal(challenge.solution()).withStyle(ChatFormatting.GRAY)));
 		heartPenalty.apply(player, challenge);
 		scheduler.scheduleNext(player.getUUID(), now);
+	}
+
+	/** Updates the quiz panel. The chat message is still sent so past answers stay in the chat history. */
+	private static void sendResult(ServerPlayer player, boolean correct, String answer, Challenge challenge) {
+		if (ServerPlayNetworking.canSend(player, ChallengeResultPayload.TYPE)) {
+			ServerPlayNetworking.send(player, new ChallengeResultPayload(correct, answer.strip(), challenge.solution()));
+		}
 	}
 
 	private static boolean canReceiveChallenge(ServerPlayer player) {

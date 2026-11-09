@@ -279,13 +279,13 @@ For **English answers** (JP→EN):
 - **Done when:** you can change a log message and see it after relaunch.
 
 ### Phase 1 — Chat MVP, vocab only (1–2 days)
-- [ ] Hardcode ~10 words in Java
-- [ ] `ChallengeScheduler` with short interval (30 s for testing)
-- [ ] Send prompt as a chat message to the player
-- [ ] Intercept the player's next chat message as the answer (hide it from chat)
-- [ ] Exact-match check (no normalization yet)
-- [ ] Wrong/timeout → `HeartPenalty` (plain damage for now)
-- [ ] `/vocabcraft trigger` command for instant testing
+- [x] Hardcode ~10 words in Java
+- [x] `ChallengeScheduler` with short interval (30 s for testing)
+- [x] Send prompt as a chat message to the player
+- [x] Intercept the player's next chat message as the answer (hide it from chat)
+- [x] Exact-match check (no normalization yet)
+- [x] Wrong/timeout → `HeartPenalty` (plain damage for now)
+- [x] `/vocabcraft trigger` command for instant testing
 - **Done when:** you can play, get quizzed, and lose a heart for a wrong answer.
 
 ### Phase 2 — Item challenges (1–2 days)

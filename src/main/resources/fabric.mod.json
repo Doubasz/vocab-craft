@@ -1,0 +1,20 @@
+{
+	"schemaVersion": 1,
+	"id": "jpquiz",
+	"version": "${version}",
+	"name": "JP Quiz",
+	"description": "Random Japanese vocabulary quizzes while you play. Fail and lose an item or a heart.",
+	"authors": ["Ferhat"],
+	"license": "CC0-1.0",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["com.ferhat.jpquiz.JpQuizMod"],
+		"client": ["com.ferhat.jpquiz.client.JpQuizClient"]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

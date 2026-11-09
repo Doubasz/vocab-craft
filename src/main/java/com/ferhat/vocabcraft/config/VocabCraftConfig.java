@@ -1,6 +1,7 @@
 package com.ferhat.vocabcraft.config;
 
 import com.ferhat.vocabcraft.VocabCraftMod;
+import com.ferhat.vocabcraft.penalty.ItemPenaltyMode;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParseException;
@@ -29,6 +30,7 @@ public final class VocabCraftConfig {
 	public static final int MAX_INTERVAL_LIMIT = 3600;
 	public static final int MIN_TIME_LIMIT = 3;
 	public static final int MAX_TIME_LIMIT = 120;
+	public static final int MAX_WEIGHT = 1000;
 
 	private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
@@ -47,6 +49,13 @@ public final class VocabCraftConfig {
 
 	/** Show the kana reading next to kanji, e.g. "食べる (たべる)" instead of "食べる". */
 	public boolean showKanaHint = false;
+
+	/** Relative chance of an item challenge vs a vocab challenge. */
+	public int itemChallengeWeight = 50;
+	public int vocabChallengeWeight = 50;
+
+	/** How much of the item is lost on a failed item challenge. */
+	public ItemPenaltyMode itemPenaltyMode = ItemPenaltyMode.STACK;
 
 	private transient Path path;
 
@@ -89,6 +98,14 @@ public final class VocabCraftConfig {
 		joinGraceSeconds = clamp(joinGraceSeconds, 0, MAX_INTERVAL_LIMIT);
 		retrySeconds = clamp(retrySeconds, MIN_INTERVAL_LIMIT, MAX_INTERVAL_LIMIT);
 		timeLimitSeconds = clamp(timeLimitSeconds, MIN_TIME_LIMIT, MAX_TIME_LIMIT);
+		itemChallengeWeight = clamp(itemChallengeWeight, 0, MAX_WEIGHT);
+		vocabChallengeWeight = clamp(vocabChallengeWeight, 0, MAX_WEIGHT);
+		if (itemChallengeWeight + vocabChallengeWeight == 0) {
+			vocabChallengeWeight = 1;
+		}
+		if (itemPenaltyMode == null) {
+			itemPenaltyMode = ItemPenaltyMode.STACK;
+		}
 	}
 
 	private static int clamp(int value, int min, int max) {

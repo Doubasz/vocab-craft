@@ -11,8 +11,17 @@ import java.util.List;
  *
  * @param deadlineTick last server tick on which an answer is still accepted
  * @param showKana     show the kana reading next to kanji
+ * @param itemTarget   the inventory item at stake, or {@code null} for a vocab challenge
  */
-public record Challenge(VocabEntry entry, Direction direction, long deadlineTick, boolean showKana) {
+public record Challenge(VocabEntry entry, Direction direction, long deadlineTick, boolean showKana, ItemTarget itemTarget) {
+
+	public static Challenge vocab(VocabEntry entry, Direction direction, long deadlineTick, boolean showKana) {
+		return new Challenge(entry, direction, deadlineTick, showKana, null);
+	}
+
+	public ChallengeType type() {
+		return itemTarget == null ? ChallengeType.VOCAB : ChallengeType.ITEM;
+	}
 
 	/** What the player is shown. */
 	public String prompt() {

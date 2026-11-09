@@ -11,13 +11,14 @@ import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.events.GuiEventListener;
 import net.minecraft.client.gui.screens.ChatScreen;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.world.item.ItemStack;
 
 /**
- * Quiz panel in the top-left corner. Does not take input or pause the game; the player answers in chat.
+ * Quiz panel at the top center of the screen. Does not take input or pause the game; the player answers in chat.
  *
  * <pre>
- * ┃ SAY IT IN JAPANESE                 12s
- * ┃ water                                     (2x scale)
+ * ┃ [icon] SAY IT IN JAPANESE           12s   (icon only for item challenges)
+ * ┃ [ 2x ] water                              (2x scale)
  * ┃ ██████████████░░░░░░░░░░░░░░░░░░░░░░
  * ┃ > mizu_
  * </pre>
@@ -29,6 +30,8 @@ public final class QuizHud implements HudElement {
 	private static final int MIN_CONTENT_WIDTH = 180;
 	private static final float PROMPT_SCALE = 2.0F;
 	private static final int BAR_HEIGHT = 3;
+	private static final float ICON_SCALE = 2.0F;
+	private static final int ICON_SIZE = Math.round(16 * ICON_SCALE);
 
 	private static final int BACKGROUND = 0xD0101014;
 	private static final int YELLOW = 0xFFF2C94C;
@@ -52,29 +55,46 @@ public final class QuizHud implements HudElement {
 		int accent = result == null ? YELLOW : result.correct() ? GREEN : RED;
 		String header = challenge.toJapanese() ? "SAY IT IN JAPANESE" : "SAY IT IN ENGLISH";
 		int remaining = ClientChallengeState.remainingTicks();
-		String seconds = result == null ? (remaining + 19) / 20 + "s" : "";
+		// Top-right corner: seconds left, then what was lost once resolved.
+		String corner = result == null ? (remaining + 19) / 20 + "s" : result.penalty();
 		String prompt = challenge.prompt();
 		BottomLine bottom = bottomLine(minecraft, result);
+		ItemStack icon = challenge.icon();
+		int iconSpace = icon.isEmpty() ? 0 : ICON_SIZE + PADDING;
 
-		int promptWidth = Math.round(font.width(prompt) * PROMPT_SCALE);
-		int maxContentWidth = graphics.guiWidth() - 2 * MARGIN - 2 * PADDING - ACCENT_WIDTH;
-		int contentWidth = Math.min(maxContentWidth, Math.max(MIN_CONTENT_WIDTH,
-				Math.max(promptWidth, font.width(header) + 16 + font.width(seconds))));
 		int promptHeight = Math.round(font.lineHeight * PROMPT_SCALE);
+		int promptWidth = Math.round(font.width(prompt) * PROMPT_SCALE);
+		int maxContentWidth = graphics.guiWidth() - 2 * MARGIN - 2 * PADDING - ACCENT_WIDTH - iconSpace;
+		int contentWidth = Math.min(maxContentWidth, Math.max(MIN_CONTENT_WIDTH,
+				Math.max(promptWidth, font.width(header) + 16 + font.width(corner))));
+		int width = ACCENT_WIDTH + PADDING + iconSpace + contentWidth + PADDING;
 		int height = PADDING + font.lineHeight + 4 + promptHeight + 6 + BAR_HEIGHT + 6 + font.lineHeight + PADDING;
 
-		int left = MARGIN;
+		// Top center of the screen
+		int left = (graphics.guiWidth() - width) / 2;
 		int top = MARGIN;
-		int x = left + ACCENT_WIDTH + PADDING;
+		int x = left + ACCENT_WIDTH + PADDING + iconSpace;
 		int right = x + contentWidth;
 
-		graphics.fill(left, top, right + PADDING, top + height, BACKGROUND);
+		graphics.fill(left, top, left + width, top + height, BACKGROUND);
 		graphics.fill(left, top, left + ACCENT_WIDTH, top + height, accent);
 
-		// Header + seconds left
+		// Item at stake, drawn at 2x next to the header and prompt
+		if (!icon.isEmpty()) {
+			int iconX = left + ACCENT_WIDTH + PADDING;
+			int iconY = top + PADDING + (font.lineHeight + 4 + promptHeight - ICON_SIZE) / 2;
+			graphics.pose().pushMatrix();
+			graphics.pose().translate(iconX, iconY);
+			graphics.pose().scale(ICON_SCALE, ICON_SCALE);
+			graphics.item(icon, 0, 0);
+			graphics.itemDecorations(font, icon, 0, 0);
+			graphics.pose().popMatrix();
+		}
+
+		// Header + corner text
 		int y = top + PADDING;
 		graphics.text(font, header, x, y, GRAY, false);
-		graphics.text(font, seconds, right - font.width(seconds), y, WHITE, false);
+		graphics.text(font, corner, right - font.width(corner), y, result == null ? WHITE : accent, false);
 
 		// Prompt, drawn at 2x
 		y += font.lineHeight + 4;

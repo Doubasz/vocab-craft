@@ -30,11 +30,11 @@ class VocabEntryTest {
 
 	@Test
 	void promptAndSolutionFollowKanaOption() {
-		Challenge withoutKana = new Challenge(TABERU, Direction.JP_TO_EN, 0, false);
+		Challenge withoutKana = Challenge.vocab(TABERU, Direction.JP_TO_EN, 0, false);
 		assertEquals("食べる", withoutKana.prompt());
 		assertEquals("食べる = taberu / to eat", withoutKana.solution());
 
-		Challenge withKana = new Challenge(TABERU, Direction.JP_TO_EN, 0, true);
+		Challenge withKana = Challenge.vocab(TABERU, Direction.JP_TO_EN, 0, true);
 		assertEquals("食べる (たべる)", withKana.prompt());
 	}
 }

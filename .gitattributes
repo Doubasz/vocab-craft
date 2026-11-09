@@ -7,3 +7,11 @@
 # These are Windows script files and should use crlf
 *.bat           text eol=crlf
 
+* text=auto eol=lf
+
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+*.jar binary
+*.png binary
+*.ogg binary

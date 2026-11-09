@@ -4,6 +4,7 @@ import com.ferhat.vocabcraft.challenge.ChallengeManager;
 import com.ferhat.vocabcraft.challenge.ChallengeScheduler;
 import com.ferhat.vocabcraft.command.VocabCraftCommand;
 import com.ferhat.vocabcraft.config.VocabCraftConfig;
+import com.ferhat.vocabcraft.net.VocabCraftNetworking;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
@@ -22,6 +23,8 @@ public class VocabCraftMod implements ModInitializer {
 		VocabCraftConfig config = VocabCraftConfig.load(
 				FabricLoader.getInstance().getConfigDir().resolve(MOD_ID).resolve("config.json"));
 		ChallengeManager challengeManager = new ChallengeManager(config, new ChallengeScheduler(config));
+
+		VocabCraftNetworking.registerPayloads();
 
 		ServerTickEvents.END_SERVER_TICK.register(challengeManager::tick);
 

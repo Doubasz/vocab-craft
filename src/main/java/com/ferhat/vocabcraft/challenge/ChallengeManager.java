@@ -22,12 +22,18 @@ import java.util.concurrent.ThreadLocalRandom;
  * The server is the only authority; the client only displays and sends text.
  */
 public final class ChallengeManager {
+	private final VocabCraftConfig config;
 	private final ChallengeScheduler scheduler;
 	private final Penalty heartPenalty = new HeartPenalty();
 	private final Map<UUID, Challenge> active = new ConcurrentHashMap<>();
 
-	public ChallengeManager(ChallengeScheduler scheduler) {
+	public ChallengeManager(VocabCraftConfig config, ChallengeScheduler scheduler) {
+		this.config = config;
 		this.scheduler = scheduler;
+	}
+
+	public ChallengeScheduler scheduler() {
+		return scheduler;
 	}
 
 	public void onJoin(ServerPlayer player, long now) {
@@ -78,17 +84,18 @@ public final class ChallengeManager {
 		VocabEntry entry = words.get(random.nextInt(words.size()));
 		Direction direction = Direction.values()[random.nextInt(Direction.values().length)];
 
+		int timeLimit = config.timeLimitSeconds;
 		long deadline = now
-				+ (long) VocabCraftConfig.TIME_LIMIT_SECONDS * VocabCraftConfig.TICKS_PER_SECOND
+				+ (long) timeLimit * VocabCraftConfig.TICKS_PER_SECOND
 				+ VocabCraftConfig.LATENCY_GRACE_TICKS;
-		Challenge challenge = new Challenge(entry, direction, deadline);
+		Challenge challenge = new Challenge(entry, direction, deadline, config.showKanaHint);
 		active.put(player.getUUID(), challenge);
 
 		String instruction = direction == Direction.EN_TO_JP ? "Say it in Japanese: " : "Say it in English: ";
 		player.sendSystemMessage(prefix()
 				.append(Component.literal(instruction).withStyle(ChatFormatting.YELLOW))
 				.append(Component.literal(challenge.prompt()).withStyle(ChatFormatting.WHITE, ChatFormatting.BOLD))
-				.append(Component.literal(" (" + VocabCraftConfig.TIME_LIMIT_SECONDS + "s, answer in chat)")
+				.append(Component.literal(" (" + timeLimit + "s, answer in chat)")
 						.withStyle(ChatFormatting.GRAY)));
 		return true;
 	}

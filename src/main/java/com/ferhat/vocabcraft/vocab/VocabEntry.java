@@ -23,8 +23,15 @@ public record VocabEntry(String id, String kanji, String kana, List<String> roma
 		}
 	}
 
-	/** Kanji with its kana reading if the word has kanji, otherwise just the kana. */
-	public String japaneseDisplay() {
-		return kanji == null ? kana : kanji + " (" + kana + ")";
+	/**
+	 * How the word is written in Japanese.
+	 *
+	 * @param withKana add the kana reading after kanji, e.g. "食べる (たべる)"; ignored for kana-only words
+	 */
+	public String japaneseDisplay(boolean withKana) {
+		if (kanji == null) {
+			return kana;
+		}
+		return withKana ? kanji + " (" + kana + ")" : kanji;
 	}
 }

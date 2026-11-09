@@ -12,20 +12,23 @@ import java.util.concurrent.ThreadLocalRandom;
  * Tick-based, so pausing a singleplayer game pauses the countdown too.
  */
 public final class ChallengeScheduler {
+	private final VocabCraftConfig config;
 	private final Map<UUID, Long> nextTriggerTick = new ConcurrentHashMap<>();
 
+	public ChallengeScheduler(VocabCraftConfig config) {
+		this.config = config;
+	}
+
 	public void scheduleAfterJoin(UUID player, long now) {
-		scheduleIn(player, now, seconds(VocabCraftConfig.JOIN_GRACE_SECONDS));
+		scheduleIn(player, now, seconds(config.joinGraceSeconds));
 	}
 
 	public void scheduleNext(UUID player, long now) {
-		int delay = ThreadLocalRandom.current().nextInt(
-				VocabCraftConfig.MIN_INTERVAL_SECONDS, VocabCraftConfig.MAX_INTERVAL_SECONDS + 1);
-		scheduleIn(player, now, seconds(delay));
+		scheduleIn(player, now, randomIntervalTicks());
 	}
 
 	public void scheduleRetry(UUID player, long now) {
-		scheduleIn(player, now, seconds(VocabCraftConfig.RETRY_SECONDS));
+		scheduleIn(player, now, seconds(config.retrySeconds));
 	}
 
 	public boolean isDue(UUID player, long now) {
@@ -35,6 +38,15 @@ public final class ChallengeScheduler {
 
 	public void remove(UUID player) {
 		nextTriggerTick.remove(player);
+	}
+
+	/** Reschedules every waiting player with the current interval, e.g. after the interval was changed. */
+	public void rescheduleAll(long now) {
+		nextTriggerTick.replaceAll((player, tick) -> now + randomIntervalTicks());
+	}
+
+	private long randomIntervalTicks() {
+		return seconds(ThreadLocalRandom.current().nextInt(config.minIntervalSeconds, config.maxIntervalSeconds + 1));
 	}
 
 	private void scheduleIn(UUID player, long now, long ticks) {

@@ -21,14 +21,14 @@ class StarterWordsTest {
 	@Test
 	void everyWordAcceptsItsOwnFormsInBothDirections() {
 		for (VocabEntry word : StarterWords.ALL) {
-			Challenge toJp = new Challenge(word, Direction.EN_TO_JP, 0);
+			Challenge toJp = new Challenge(word, Direction.EN_TO_JP, 0, false);
 			assertTrue(toJp.isCorrect(word.romaji().getFirst()), word.id());
 			assertTrue(toJp.isCorrect(word.kana()), word.id());
 			if (word.kanji() != null) {
 				assertTrue(toJp.isCorrect(word.kanji()), word.id());
 			}
 
-			Challenge toEn = new Challenge(word, Direction.JP_TO_EN, 0);
+			Challenge toEn = new Challenge(word, Direction.JP_TO_EN, 0, false);
 			for (String en : word.en()) {
 				assertTrue(toEn.isCorrect(en), word.id() + " / " + en);
 			}

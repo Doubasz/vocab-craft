@@ -1,15 +1,15 @@
 {
 	"schemaVersion": 1,
-	"id": "jpquiz",
+	"id": "vocabcraft",
 	"version": "${version}",
-	"name": "JP Quiz",
+	"name": "Vocab Craft",
 	"description": "Random Japanese vocabulary quizzes while you play. Fail and lose an item or a heart.",
 	"authors": ["Ferhat"],
 	"license": "CC0-1.0",
 	"environment": "*",
 	"entrypoints": {
-		"main": ["com.ferhat.jpquiz.JpQuizMod"],
-		"client": ["com.ferhat.jpquiz.client.JpQuizClient"]
+		"main": ["com.ferhat.vocabcraft.VocabCraftMod"],
+		"client": ["com.ferhat.vocabcraft.client.VocabCraftClient"]
 	},
 	"depends": {
 		"fabricloader": ">=0.20.1",

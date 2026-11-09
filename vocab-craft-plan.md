@@ -1,4 +1,4 @@
-# JP Quiz — Minecraft Japanese Vocabulary Mod
+# Vocab Craft — Minecraft Japanese Vocabulary Mod
 ### Detailed design & implementation plan
 
 ---
@@ -86,7 +86,7 @@ After every challenge, the correct answer is shown, so a failure still teaches y
 
 ### 4.6 Penalties
 **Vocab challenge → lose a heart**
-- Deal 2 HP of damage with a **custom damage type** (`jpquiz:quiz_fail`) that bypasses armor and enchantments → always exactly one heart.
+- Deal 2 HP of damage with a **custom damage type** (`vocabcraft:quiz_fail`) that bypasses armor and enchantments → always exactly one heart.
 - Custom death message: *"Ferhat forgot how to say 食べる"*.
 - Config `canKill`: if `false`, damage is capped so you stay at ≥ ½ heart.
 
@@ -115,10 +115,10 @@ After every challenge, the correct answer is shown, so a failure still teaches y
 
 ### 5.1 Package layout
 ```
-src/main/java/com/ferhat/jpquiz/
-├── JpQuizMod.java                  // ModInitializer: registers everything (server/common)
+src/main/java/com/ferhat/vocabcraft/
+├── VocabCraftMod.java                  // ModInitializer: registers everything (server/common)
 ├── config/
-│   └── JpQuizConfig.java           // load/save config/jpquiz/config.json (Gson)
+│   └── VocabCraftConfig.java           // load/save config/vocabcraft/config.json (Gson)
 ├── challenge/
 │   ├── Challenge.java              // record: id, type, direction, prompt, accepted answers,
 │   │                               //         deadlineTick, ItemTarget (nullable), sourceWordId
@@ -145,23 +145,23 @@ src/main/java/com/ferhat/jpquiz/
 │   ├── AnswerPayload.java          // C2S: id, answer text
 │   └── ChallengeResultPayload.java // S2C: id, correct?, correct answer display
 ├── command/
-│   └── JpQuizCommand.java          // /jpquiz trigger|item|vocab|skip|stats|reload
+│   └── VocabCraftCommand.java          // /vocabcraft trigger|item|vocab|skip|stats|reload
 └── stats/
     └── PlayerStats.java            // phase 6: accuracy, streaks, per-word Leitner box
 
-src/client/java/com/ferhat/jpquiz/client/
-├── JpQuizClient.java               // ClientModInitializer: packet receivers, HUD
+src/client/java/com/ferhat/vocabcraft/client/
+├── VocabCraftClient.java               // ClientModInitializer: packet receivers, HUD
 ├── ClientChallengeState.java       // current challenge shown on this client
 ├── QuizScreen.java                 // text field + countdown bar + prompt (+ item icon)
 └── QuizHud.java                    // small countdown when screen is closed (optional)
 
 src/main/resources/
 ├── fabric.mod.json
-├── assets/jpquiz/lang/en_us.json   // UI strings + death message
-├── assets/jpquiz/sounds.json       // (optional custom sounds)
-├── data/jpquiz/damage_type/quiz_fail.json
-├── data/minecraft/tags/damage_type/bypasses_armor.json   // add jpquiz:quiz_fail
-└── jpquiz/
+├── assets/vocabcraft/lang/en_us.json   // UI strings + death message
+├── assets/vocabcraft/sounds.json       // (optional custom sounds)
+├── data/vocabcraft/damage_type/quiz_fail.json
+├── data/minecraft/tags/damage_type/bypasses_armor.json   // add vocabcraft:quiz_fail
+└── vocabcraft/
     ├── items_curated.json          // hand-made item dictionary
     ├── items_vanilla_ja.json       // generated (see §6.2)
     └── decks/
@@ -199,7 +199,7 @@ reschedule next challenge
 | Commands | `CommandRegistrationCallback.EVENT` |
 | Packets | `PayloadTypeRegistry` + `ServerPlayNetworking` / `ClientPlayNetworking` |
 | HUD | Fabric's HUD render callback/registry for the MC version you pick |
-| Config/data reload | `/jpquiz reload` command (simple) |
+| Config/data reload | `/vocabcraft reload` command (simple) |
 
 ---
 
@@ -238,9 +238,9 @@ Curated item entries add the Minecraft id:
   → ⚠️ Fine for personal use; if you ever publish the mod publicly, regenerate at runtime on the client instead of bundling Mojang's translations.
 
 ### 6.3 User decks
-- Bundled decks are copied on first launch to `config/jpquiz/decks/` so you can **edit them and add your own**.
+- Bundled decks are copied on first launch to `config/vocabcraft/decks/` so you can **edit them and add your own**.
 - Config lists which decks are enabled.
-- Phase 6: **Anki CSV import** — `/jpquiz import anki <file.csv>` → maps columns (configurable) to `kana / kanji / en`, generates romaji automatically.
+- Phase 6: **Anki CSV import** — `/vocabcraft import anki <file.csv>` → maps columns (configurable) to `kana / kanji / en`, generates romaji automatically.
 
 ---
 
@@ -272,10 +272,10 @@ For **English answers** (JP→EN):
 ## 8. Implementation phases
 
 ### Phase 0 — Environment (½ day)
-- [ ] Install JDK, IntelliJ + Minecraft Development plugin
-- [ ] Clone Fabric example mod, rename to `jpquiz`, set mod id/package
-- [ ] `./gradlew runClient` → game launches with mod in mod list
-- [ ] Log "JP Quiz loaded" from `onInitialize()`
+- [x] Install JDK, IntelliJ + Minecraft Development plugin
+- [x] Clone Fabric example mod, rename to `vocab-craft` (mod id `vocabcraft`), set mod id/package
+- [x] `./gradlew runClient` → game launches with mod in mod list
+- [x] Log "Vocab Craft loaded" from `onInitialize()`
 - **Done when:** you can change a log message and see it after relaunch.
 
 ### Phase 1 — Chat MVP, vocab only (1–2 days)
@@ -285,7 +285,7 @@ For **English answers** (JP→EN):
 - [ ] Intercept the player's next chat message as the answer (hide it from chat)
 - [ ] Exact-match check (no normalization yet)
 - [ ] Wrong/timeout → `HeartPenalty` (plain damage for now)
-- [ ] `/jpquiz trigger` command for instant testing
+- [ ] `/vocabcraft trigger` command for instant testing
 - **Done when:** you can play, get quizzed, and lose a heart for a wrong answer.
 
 ### Phase 2 — Item challenges (1–2 days)
@@ -294,7 +294,7 @@ For **English answers** (JP→EN):
 - [ ] `ItemChallengeFactory`: inventory scan + eligible items + random pick
 - [ ] `ItemPenalty` with the 3-step removal + heart fallback
 - [ ] Weighted choice between ITEM and VOCAB
-- [ ] `/jpquiz item` and `/jpquiz vocab` to force a type
+- [ ] `/vocabcraft item` and `/vocabcraft vocab` to force a type
 - **Done when:** a wrong answer deletes the item, even if you move it to another slot; dropping it costs a heart.
 
 ### Phase 3 — Real data & matching (2–3 days)
@@ -302,7 +302,7 @@ For **English answers** (JP→EN):
 - [ ] Write starter decks: ~50 verbs, ~30 adjectives, ~50 nouns (N5)
 - [ ] `KanaConverter` + `AnswerMatcher` with unit tests
 - [ ] Both directions (EN→JP, JP→EN)
-- [ ] Custom damage type `jpquiz:quiz_fail` + death message + bypass armor tag
+- [ ] Custom damage type `vocabcraft:quiz_fail` + death message + bypass armor tag
 - [ ] Python script → `items_vanilla_ja.json`; `easy`/`hard` difficulty
 - **Done when:** `taberu`, `たべる`, `タベル`, `食べる` all pass; armor doesn't reduce damage.
 
@@ -316,15 +316,15 @@ For **English answers** (JP→EN):
 - **Done when:** the popup appears, counts down, and closes with the result.
 
 ### Phase 5 — Config & robustness (1–2 days)
-- [ ] `config/jpquiz/config.json` with every option from §9
-- [ ] `/jpquiz reload`, `/jpquiz skip`
+- [ ] `config/vocabcraft/config.json` with every option from §9
+- [ ] `/vocabcraft reload`, `/vocabcraft skip`
 - [ ] All edge cases in §11
 - [ ] Multiplayer-safe (per-UUID state everywhere)
 - **Done when:** you can tune everything without recompiling.
 
 ### Phase 6 — Learning features (open-ended)
 - [ ] `PlayerStats` saved per world/player (accuracy, streak, items lost, hearts lost)
-- [ ] `/jpquiz stats`
+- [ ] `/vocabcraft stats`
 - [ ] **Leitner spaced repetition**: each word has a box 1–5; fail → box 1; success → box +1; pick probability ∝ 1/box
 - [ ] Anki CSV import
 - [ ] Hint system
@@ -372,7 +372,7 @@ For **English answers** (JP→EN):
 - **Unit tests (JUnit, no Minecraft needed):** `KanaConverter`, `AnswerMatcher`, deck JSON parsing. This is where most bugs hide — write tests first for these two classes.
   - e.g. `daiyamondo == ダイヤモンド`, `kitte == きって`, `konnichiwa == こんにちは`, `to eat == eat`, `shinbun == shimbun == しんぶん`
 - **In-game manual tests** with debug commands:
-  - `/jpquiz trigger`, `/jpquiz item`, `/jpquiz vocab`, `/jpquiz skip`
+  - `/vocabcraft trigger`, `/vocabcraft item`, `/vocabcraft vocab`, `/vocabcraft skip`
   - Debug config: interval 10 s for fast iteration
 - **Edge-case checklist** (§11) run before calling a phase done.
 - Test in both **singleplayer** and a **local dedicated server** (`./gradlew runServer` + client) — this catches client/server side mistakes.

@@ -9,5 +9,9 @@ pluginManagement {
 	}
 }
 
-// Should match your modid
+plugins {
+	// lets Gradle find/download the JDK required by gradle/gradle-daemon-jvm.properties
+	id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+
 rootProject.name = 'vocab-craft'

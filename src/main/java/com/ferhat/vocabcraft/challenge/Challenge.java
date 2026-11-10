@@ -11,8 +11,17 @@ import java.util.List;
  *
  * @param deadlineTick last server tick on which an answer is still accepted
  * @param showKana     show the kana reading next to kanji
+ * @param itemTarget   the inventory item at stake, or {@code null} for a vocab challenge
  */
-public record Challenge(VocabEntry entry, Direction direction, long deadlineTick, boolean showKana) {
+public record Challenge(VocabEntry entry, Direction direction, long deadlineTick, boolean showKana, ItemTarget itemTarget) {
+
+	public static Challenge vocab(VocabEntry entry, Direction direction, long deadlineTick, boolean showKana) {
+		return new Challenge(entry, direction, deadlineTick, showKana, null);
+	}
+
+	public ChallengeType type() {
+		return itemTarget == null ? ChallengeType.VOCAB : ChallengeType.ITEM;
+	}
 
 	/** What the player is shown. */
 	public String prompt() {
@@ -22,18 +31,22 @@ public record Challenge(VocabEntry entry, Direction direction, long deadlineTick
 		};
 	}
 
+	/**
+	 * EN→JP: romaji, kana or kanji.
+	 * JP→EN: the English meaning, or the reading in romaji or kana (e.g. 食べる → "to eat" or "taberu").
+	 */
 	public List<String> acceptedAnswers() {
-		return switch (direction) {
+		List<String> answers = new ArrayList<>(entry.romaji());
+		answers.add(entry.kana());
+		switch (direction) {
 			case EN_TO_JP -> {
-				List<String> answers = new ArrayList<>(entry.romaji());
-				answers.add(entry.kana());
 				if (entry.kanji() != null) {
 					answers.add(entry.kanji());
 				}
-				yield answers;
 			}
-			case JP_TO_EN -> entry.en();
-		};
+			case JP_TO_EN -> answers.addAll(entry.en());
+		}
+		return answers;
 	}
 
 	public boolean isCorrect(String answer) {

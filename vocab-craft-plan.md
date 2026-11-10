@@ -289,12 +289,12 @@ For **English answers** (JP→EN):
 - **Done when:** you can play, get quizzed, and lose a heart for a wrong answer.
 
 ### Phase 2 — Item challenges (1–2 days)
-- [ ] `items_curated.json` with ~30 items to start
-- [ ] `ItemDictionary` loader
-- [ ] `ItemChallengeFactory`: inventory scan + eligible items + random pick
-- [ ] `ItemPenalty` with the 3-step removal + heart fallback
-- [ ] Weighted choice between ITEM and VOCAB
-- [ ] `/vocabcraft item` and `/vocabcraft vocab` to force a type
+- [x] `items_curated.json` with ~30 items to start (40)
+- [x] `ItemDictionary` loader
+- [x] `ItemChallengeFactory`: inventory scan + eligible items + random pick
+- [x] `ItemPenalty` with the 3-step removal + heart fallback
+- [x] Weighted choice between ITEM and VOCAB
+- [x] `/vocabcraft item` and `/vocabcraft vocab` to force a type (+ `config weights`, `config itemPenalty`)
 - **Done when:** a wrong answer deletes the item, even if you move it to another slot; dropping it costs a heart.
 
 ### Phase 3 — Real data & matching (2–3 days)

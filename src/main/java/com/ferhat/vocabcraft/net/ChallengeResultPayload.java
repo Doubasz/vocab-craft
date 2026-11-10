@@ -13,8 +13,10 @@ import net.minecraft.resources.Identifier;
  * @param correct  whether the answer was accepted
  * @param answer   what the player typed, empty on timeout
  * @param solution full answer, e.g. "食べる = taberu / to eat"
+ * @param penalty  what was lost, e.g. "-1 ❤" or "-12 Bread"; empty on success
  */
-public record ChallengeResultPayload(boolean correct, String answer, String solution) implements CustomPacketPayload {
+public record ChallengeResultPayload(boolean correct, String answer, String solution, String penalty)
+		implements CustomPacketPayload {
 	public static final Type<ChallengeResultPayload> TYPE =
 			new Type<>(Identifier.fromNamespaceAndPath(VocabCraftMod.MOD_ID, "challenge_result"));
 
@@ -22,6 +24,7 @@ public record ChallengeResultPayload(boolean correct, String answer, String solu
 			ByteBufCodecs.BOOL, ChallengeResultPayload::correct,
 			ByteBufCodecs.STRING_UTF8, ChallengeResultPayload::answer,
 			ByteBufCodecs.STRING_UTF8, ChallengeResultPayload::solution,
+			ByteBufCodecs.STRING_UTF8, ChallengeResultPayload::penalty,
 			ChallengeResultPayload::new);
 
 	@Override

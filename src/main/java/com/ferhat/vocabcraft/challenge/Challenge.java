@@ -31,18 +31,22 @@ public record Challenge(VocabEntry entry, Direction direction, long deadlineTick
 		};
 	}
 
+	/**
+	 * EN→JP: romaji, kana or kanji.
+	 * JP→EN: the English meaning, or the reading in romaji or kana (e.g. 食べる → "to eat" or "taberu").
+	 */
 	public List<String> acceptedAnswers() {
-		return switch (direction) {
+		List<String> answers = new ArrayList<>(entry.romaji());
+		answers.add(entry.kana());
+		switch (direction) {
 			case EN_TO_JP -> {
-				List<String> answers = new ArrayList<>(entry.romaji());
-				answers.add(entry.kana());
 				if (entry.kanji() != null) {
 					answers.add(entry.kanji());
 				}
-				yield answers;
 			}
-			case JP_TO_EN -> entry.en();
-		};
+			case JP_TO_EN -> answers.addAll(entry.en());
+		}
+		return answers;
 	}
 
 	public boolean isCorrect(String answer) {

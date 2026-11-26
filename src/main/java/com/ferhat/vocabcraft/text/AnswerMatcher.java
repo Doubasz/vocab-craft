@@ -102,7 +102,8 @@ public final class AnswerMatcher {
 		};
 	}
 
-	static String normalizeEnglish(String s) {
+	/** Lowercase, no punctuation, single spaces, no leading "to", "a", "an" or "the". */
+	public static String normalizeEnglish(String s) {
 		String text = Normalizer.normalize(s, Normalizer.Form.NFKC).toLowerCase(Locale.ROOT);
 		text = ENGLISH_PUNCTUATION.matcher(text).replaceAll(" ");
 		text = WHITESPACE.matcher(text.strip()).replaceAll(" ");

@@ -6,8 +6,8 @@ import com.ferhat.vocabcraft.net.ChallengeStartPayload;
 import com.ferhat.vocabcraft.penalty.HeartPenalty;
 import com.ferhat.vocabcraft.penalty.ItemPenalty;
 import com.ferhat.vocabcraft.penalty.Penalty;
-import com.ferhat.vocabcraft.vocab.StarterWords;
 import com.ferhat.vocabcraft.vocab.VocabEntry;
+import com.ferhat.vocabcraft.vocab.VocabRepository;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -28,19 +28,22 @@ import java.util.concurrent.ThreadLocalRandom;
  * The server is the only authority; the client only displays and sends text.
  */
 public final class ChallengeManager {
-	public enum StartResult { STARTED, ALREADY_ACTIVE, NO_ELIGIBLE_ITEM }
+	public enum StartResult { STARTED, ALREADY_ACTIVE, NO_ELIGIBLE_ITEM, NO_WORDS }
 
 	private final VocabCraftConfig config;
 	private final ChallengeScheduler scheduler;
 	private final ItemChallengeFactory itemFactory;
+	private final VocabRepository vocab;
 	private final Penalty heartPenalty;
 	private final Penalty itemPenalty;
 	private final Map<UUID, Challenge> active = new ConcurrentHashMap<>();
 
-	public ChallengeManager(VocabCraftConfig config, ChallengeScheduler scheduler, ItemChallengeFactory itemFactory) {
+	public ChallengeManager(VocabCraftConfig config, ChallengeScheduler scheduler, ItemChallengeFactory itemFactory,
+							VocabRepository vocab) {
 		this.config = config;
 		this.scheduler = scheduler;
 		this.itemFactory = itemFactory;
+		this.vocab = vocab;
 		this.heartPenalty = new HeartPenalty();
 		this.itemPenalty = new ItemPenalty(config, heartPenalty);
 	}
@@ -87,8 +90,8 @@ public final class ChallengeManager {
 	 * Starts a challenge right away (used by the scheduler and the /vocabcraft commands).
 	 *
 	 * @param forcedType type to start, or {@code null} to pick by weight.
-	 *                   A weighted ITEM pick falls back to VOCAB when no inventory item has a Japanese name;
-	 *                   a forced ITEM does not.
+	 *                   A weighted pick falls back to the other type when it has nothing to ask
+	 *                   (no named item in the inventory, no words in the enabled decks); a forced type does not.
 	 */
 	public StartResult start(ServerPlayer player, long now, ChallengeType forcedType) {
 		if (active.containsKey(player.getUUID())) {
@@ -103,17 +106,28 @@ public final class ChallengeManager {
 				+ (long) timeLimit * VocabCraftConfig.TICKS_PER_SECOND
 				+ VocabCraftConfig.LATENCY_GRACE_TICKS;
 
+		Optional<ItemChallengeFactory.Pick> pick = type == ChallengeType.ITEM ? itemFactory.pick(player) : Optional.empty();
+		if (pick.isEmpty() && forcedType == ChallengeType.ITEM) {
+			return StartResult.NO_ELIGIBLE_ITEM;
+		}
+		Optional<VocabEntry> word = pick.isEmpty() ? vocab.randomWord(config.enabledDecks, random) : Optional.empty();
+		if (pick.isEmpty() && word.isEmpty()) {
+			// No words to ask: try an item instead, unless VOCAB was forced.
+			pick = forcedType == null ? itemFactory.pick(player) : Optional.empty();
+			if (pick.isEmpty()) {
+				return StartResult.NO_WORDS;
+			}
+		}
+
 		Challenge challenge;
 		ItemStack icon = ItemStack.EMPTY;
-		Optional<ItemChallengeFactory.Pick> pick = type == ChallengeType.ITEM ? itemFactory.pick(player) : Optional.empty();
 		if (pick.isPresent()) {
-			challenge = new Challenge(pick.get().entry(), direction, deadline, config.showKanaHint, pick.get().target());
+			challenge = Challenge.item(pick.get().entry(), direction, deadline, config.showKanaHint, pick.get().target());
 			icon = pick.get().stack();
-		} else if (forcedType == ChallengeType.ITEM) {
-			return StartResult.NO_ELIGIBLE_ITEM;
 		} else {
-			List<VocabEntry> words = StarterWords.ALL;
-			challenge = Challenge.vocab(words.get(random.nextInt(words.size())), direction, deadline, config.showKanaHint);
+			VocabEntry entry = word.orElseThrow();
+			List<VocabEntry> synonyms = direction == Direction.EN_TO_JP ? vocab.synonyms(entry, config.enabledDecks) : List.of();
+			challenge = Challenge.vocab(entry, direction, deadline, config.showKanaHint, synonyms);
 		}
 		active.put(player.getUUID(), challenge);
 

@@ -77,7 +77,8 @@ class KanaConverterTest {
 			"ダイヤモンド, daiyamondo",
 			"ケーキ, keeki",
 			"パーティー, paatii",
-			"ふぁいる, fairu"
+			"ふぁいる, fairu",
+			"ジャック・オ・ランタン, jakku o rantan"
 	})
 	void toRomaji(String kana, String romaji) {
 		assertEquals(romaji, KanaConverter.toRomaji(kana));

@@ -1,0 +1,5507 @@
+{
+ "id": "jlpt_n4",
+ "title": "JLPT N4",
+ "source": "https://github.com/jamsinclair/open-anki-jlpt-decks @ 1ad6673 (based on tanos.co.uk JLPT lists)",
+ "words": [
+  {
+   "id": "踏む|ふむ",
+   "kanji": "踏む",
+   "kana": "ふむ",
+   "en": [
+    "to step on",
+    "to tread on"
+   ]
+  },
+  {
+   "id": "すっと|すっと",
+   "kana": "すっと",
+   "en": [
+    "straight",
+    "quickly"
+   ]
+  },
+  {
+   "id": "盗む|ぬすむ",
+   "kanji": "盗む",
+   "kana": "ぬすむ",
+   "en": [
+    "to steal",
+    "to rob"
+   ]
+  },
+  {
+   "id": "大抵|たいてい",
+   "kanji": "大抵",
+   "kana": "たいてい",
+   "en": [
+    "generally",
+    "usually"
+   ]
+  },
+  {
+   "id": "とうとう|とうとう",
+   "kana": "とうとう",
+   "en": [
+    "finally",
+    "at last"
+   ]
+  },
+  {
+   "id": "ガソリン|ガソリン",
+   "kana": "ガソリン",
+   "en": [
+    "gasoline",
+    "petrol"
+   ]
+  },
+  {
+   "id": "鳴る|なる",
+   "kanji": "鳴る",
+   "kana": "なる",
+   "en": [
+    "to sound",
+    "to ring"
+   ]
+  },
+  {
+   "id": "しっかり|しっかり",
+   "kana": "しっかり",
+   "en": [
+    "firmly",
+    "steady"
+   ]
+  },
+  {
+   "id": "生きる|いきる",
+   "kanji": "生きる",
+   "kana": "いきる",
+   "en": [
+    "to live"
+   ]
+  },
+  {
+   "id": "苦い|にがい",
+   "kanji": "苦い",
+   "kana": "にがい",
+   "en": [
+    "bitter"
+   ]
+  },
+  {
+   "id": "沸く|わく",
+   "kanji": "沸く",
+   "kana": "わく",
+   "en": [
+    "to boil",
+    "to grow hot"
+   ]
+  },
+  {
+   "id": "意見|いけん",
+   "kanji": "意見",
+   "kana": "いけん",
+   "en": [
+    "opinion",
+    "view",
+    "idea"
+   ]
+  },
+  {
+   "id": "やはり|やはり",
+   "kana": "やはり",
+   "alt": [
+    "やっぱり"
+   ],
+   "en": [
+    "as I thought",
+    "absolutely"
+   ]
+  },
+  {
+   "id": "漫画|まんが",
+   "kanji": "漫画",
+   "kana": "まんが",
+   "en": [
+    "comic (book)",
+    "comic",
+    "cartoon"
+   ]
+  },
+  {
+   "id": "ステレオ|ステレオ",
+   "kana": "ステレオ",
+   "en": [
+    "stereo"
+   ]
+  },
+  {
+   "id": "医学|いがく",
+   "kanji": "医学",
+   "kana": "いがく",
+   "en": [
+    "medical science"
+   ]
+  },
+  {
+   "id": "テキスト|テキスト",
+   "kana": "テキスト",
+   "en": [
+    "text",
+    "text book"
+   ]
+  },
+  {
+   "id": "折る|おる",
+   "kanji": "折る",
+   "kana": "おる",
+   "en": [
+    "to snap",
+    "to break",
+    "to bend"
+   ]
+  },
+  {
+   "id": "うかがう|うかがう",
+   "kana": "うかがう",
+   "en": [
+    "to ask"
+   ]
+  },
+  {
+   "id": "聞こえる|きこえる",
+   "kanji": "聞こえる",
+   "kana": "きこえる",
+   "en": [
+    "to be heard",
+    "to be audible"
+   ]
+  },
+  {
+   "id": "僕|ぼく",
+   "kanji": "僕",
+   "kana": "ぼく",
+   "en": [
+    "I (used by men towards those of equal or lower status)",
+    "I"
+   ]
+  },
+  {
+   "id": "必ず|かならず",
+   "kanji": "必ず",
+   "kana": "かならず",
+   "en": [
+    "surely",
+    "certainly"
+   ]
+  },
+  {
+   "id": "壊す|こわす",
+   "kanji": "壊す",
+   "kana": "こわす",
+   "en": [
+    "to break",
+    "to break down"
+   ]
+  },
+  {
+   "id": "怒る|おこる",
+   "kanji": "怒る",
+   "kana": "おこる",
+   "en": [
+    "to get angry",
+    "to scold angrily"
+   ]
+  },
+  {
+   "id": "床屋|とこや",
+   "kanji": "床屋",
+   "kana": "とこや",
+   "en": [
+    "barber's (shop)",
+    "barber's"
+   ]
+  },
+  {
+   "id": "オートバイ|オートバイ",
+   "kana": "オートバイ",
+   "en": [
+    "motorcycle (lit: auto-bi(ke))",
+    "motorcycle)"
+   ]
+  },
+  {
+   "id": "運動|うんどうする",
+   "kanji": "運動",
+   "kana": "うんどうする",
+   "en": [
+    "exercise"
+   ]
+  },
+  {
+   "id": "止む|やむ",
+   "kanji": "止む",
+   "kana": "やむ",
+   "en": [
+    "to cease",
+    "to stop"
+   ]
+  },
+  {
+   "id": "もし|もし",
+   "kana": "もし",
+   "en": [
+    "if"
+   ]
+  },
+  {
+   "id": "表|おもて",
+   "kanji": "表",
+   "kana": "おもて",
+   "en": [
+    "surface",
+    "front",
+    "outside"
+   ]
+  },
+  {
+   "id": "大学生|だいがくせい",
+   "kanji": "大学生",
+   "kana": "だいがくせい",
+   "en": [
+    "college student",
+    "university student"
+   ]
+  },
+  {
+   "id": "運転手|うんてんしゅ",
+   "kanji": "運転手",
+   "kana": "うんてんしゅ",
+   "en": [
+    "driver (by occupation)",
+    "driver"
+   ]
+  },
+  {
+   "id": "予習|よしゅう",
+   "kanji": "予習",
+   "kana": "よしゅう",
+   "en": [
+    "preparation of lessons (for class)",
+    "preparation of lessons"
+   ]
+  },
+  {
+   "id": "心配|しんぱいする",
+   "kanji": "心配",
+   "kana": "しんぱいする",
+   "en": [
+    "worry",
+    "concern"
+   ]
+  },
+  {
+   "id": "別|べつ",
+   "kanji": "別",
+   "kana": "べつ",
+   "en": [
+    "distinction",
+    "different"
+   ]
+  },
+  {
+   "id": "非常に|ひじょうに",
+   "kanji": "非常に",
+   "kana": "ひじょうに",
+   "en": [
+    "extremely",
+    "very"
+   ]
+  },
+  {
+   "id": "お宅|おたく",
+   "kanji": "お宅",
+   "kana": "おたく",
+   "en": [
+    "(someone else's) house",
+    "house",
+    "home -- polite word for 家 --"
+   ]
+  },
+  {
+   "id": "柔らかい|やわらかい",
+   "kanji": "柔らかい",
+   "kana": "やわらかい",
+   "en": [
+    "soft (in reference to texture)",
+    "soft",
+    "tender"
+   ]
+  },
+  {
+   "id": "拾う|ひろう",
+   "kanji": "拾う",
+   "kana": "ひろう",
+   "en": [
+    "to pick up (something)",
+    "to pick up",
+    "to find"
+   ]
+  },
+  {
+   "id": "気|き",
+   "kanji": "気",
+   "kana": "き",
+   "en": [
+    "spirit",
+    "mood"
+   ]
+  },
+  {
+   "id": "比べる|くらべる",
+   "kanji": "比べる",
+   "kana": "くらべる",
+   "en": [
+    "to compare"
+   ]
+  },
+  {
+   "id": "ほとんど|ほとんど",
+   "kana": "ほとんど",
+   "en": [
+    "mostly",
+    "almost"
+   ]
+  },
+  {
+   "id": "つもり|つもり",
+   "kana": "つもり",
+   "en": [
+    "intention",
+    "plan"
+   ]
+  },
+  {
+   "id": "郊外|こうがい",
+   "kanji": "郊外",
+   "kana": "こうがい",
+   "en": [
+    "suburb",
+    "outskirts"
+   ]
+  },
+  {
+   "id": "だめ|だめ",
+   "kana": "だめ",
+   "en": [
+    "useless",
+    "no good",
+    "hopeless"
+   ]
+  },
+  {
+   "id": "売り場|うりば",
+   "kanji": "売り場",
+   "kana": "うりば",
+   "en": [
+    "place where things are sold"
+   ]
+  },
+  {
+   "id": "正月|しょうがつ",
+   "kanji": "正月",
+   "kana": "しょうがつ",
+   "en": [
+    "New Year",
+    "New Year's Day"
+   ]
+  },
+  {
+   "id": "規則|きそく",
+   "kanji": "規則",
+   "kana": "きそく",
+   "en": [
+    "rule",
+    "regulation"
+   ]
+  },
+  {
+   "id": "うん|うん",
+   "kana": "うん",
+   "en": [
+    "yes (informal)",
+    "yes",
+    "all right"
+   ]
+  },
+  {
+   "id": "発音|はつおん",
+   "kanji": "発音",
+   "kana": "はつおん",
+   "en": [
+    "pronunciation"
+   ]
+  },
+  {
+   "id": "焼く|やく",
+   "kanji": "焼く",
+   "kana": "やく",
+   "en": [
+    "to bake",
+    "to grill"
+   ]
+  },
+  {
+   "id": "屋上|おくじょう",
+   "kanji": "屋上",
+   "kana": "おくじょう",
+   "en": [
+    "rooftop"
+   ]
+  },
+  {
+   "id": "失礼|しつれい",
+   "kanji": "失礼",
+   "kana": "しつれい",
+   "en": [
+    "discourtesy",
+    "impoliteness",
+    "Excuse me"
+   ]
+  },
+  {
+   "id": "ごみ|ごみ",
+   "kana": "ごみ",
+   "en": [
+    "trash",
+    "garbage"
+   ]
+  },
+  {
+   "id": "アフリカ|アフリカ",
+   "kana": "アフリカ",
+   "en": [
+    "Africa"
+   ]
+  },
+  {
+   "id": "点|てん",
+   "kanji": "点",
+   "kana": "てん",
+   "en": [
+    "mark",
+    "score",
+    "grade",
+    "point",
+    "dot"
+   ]
+  },
+  {
+   "id": "一生懸命|いっしょうけんめい",
+   "kanji": "一生懸命",
+   "kana": "いっしょうけんめい",
+   "en": [
+    "very hard (as in \"to work hard\")",
+    "very hard",
+    "with utmost effort"
+   ]
+  },
+  {
+   "id": "今度|こんど",
+   "kanji": "今度",
+   "kana": "こんど",
+   "en": [
+    "now",
+    "this time",
+    "near future",
+    "one of these days",
+    "next time"
+   ]
+  },
+  {
+   "id": "機会|きかい",
+   "kanji": "機会",
+   "kana": "きかい",
+   "en": [
+    "chance",
+    "opportunity"
+   ]
+  },
+  {
+   "id": "建てる|たてる",
+   "kanji": "建てる",
+   "kana": "たてる",
+   "en": [
+    "to build"
+   ]
+  },
+  {
+   "id": "複雑|ふくざつ",
+   "kanji": "複雑",
+   "kana": "ふくざつ",
+   "en": [
+    "complexity",
+    "complication"
+   ]
+  },
+  {
+   "id": "彼|かれ",
+   "kanji": "彼",
+   "kana": "かれ",
+   "en": [
+    "he",
+    "boyfriend"
+   ]
+  },
+  {
+   "id": "いらっしゃる|いらっしゃる",
+   "kana": "いらっしゃる",
+   "en": [
+    "-- honorific expression for いく",
+    "くる",
+    "and いる --"
+   ]
+  },
+  {
+   "id": "布団|ふとん",
+   "kanji": "布団",
+   "kana": "ふとん",
+   "en": [
+    "futon"
+   ]
+  },
+  {
+   "id": "大事|だいじ",
+   "kanji": "大事",
+   "kana": "だいじ",
+   "en": [
+    "important",
+    "valuable",
+    "serious matter"
+   ]
+  },
+  {
+   "id": "贈り物|おくりもの",
+   "kanji": "贈り物",
+   "kana": "おくりもの",
+   "en": [
+    "a gift",
+    "a present"
+   ]
+  },
+  {
+   "id": "泥棒|どろぼう",
+   "kanji": "泥棒",
+   "kana": "どろぼう",
+   "en": [
+    "thief",
+    "burglar"
+   ]
+  },
+  {
+   "id": "注意|ちゅうい",
+   "kanji": "注意",
+   "kana": "ちゅうい",
+   "en": [
+    "caution",
+    "attention"
+   ]
+  },
+  {
+   "id": "台風|たいふう",
+   "kanji": "台風",
+   "kana": "たいふう",
+   "en": [
+    "typhoon"
+   ]
+  },
+  {
+   "id": "日|ひ",
+   "kanji": "日",
+   "kana": "ひ",
+   "en": [
+    "sun",
+    "sunshine",
+    "day"
+   ]
+  },
+  {
+   "id": "そう|そう",
+   "kana": "そう",
+   "en": [
+    "really",
+    "so",
+    "yes",
+    "right"
+   ]
+  },
+  {
+   "id": "通る|とおる",
+   "kanji": "通る",
+   "kana": "とおる",
+   "en": [
+    "to pass (by)",
+    "to pass",
+    "to go through"
+   ]
+  },
+  {
+   "id": "過ぎる|すぎる",
+   "kanji": "過ぎる",
+   "kana": "すぎる",
+   "en": [
+    "to exceed",
+    "to go beyond"
+   ]
+  },
+  {
+   "id": "レポート|レポート",
+   "kana": "レポート",
+   "alt": [
+    "リポート"
+   ],
+   "en": [
+    "report"
+   ]
+  },
+  {
+   "id": "葉|は",
+   "kanji": "葉",
+   "kana": "は",
+   "en": [
+    "leaf"
+   ]
+  },
+  {
+   "id": "必要|ひつよう",
+   "kanji": "必要",
+   "kana": "ひつよう",
+   "en": [
+    "necessary"
+   ]
+  },
+  {
+   "id": "課長|かちょう",
+   "kanji": "課長",
+   "kana": "かちょう",
+   "en": [
+    "section manager"
+   ]
+  },
+  {
+   "id": "地震|じしん",
+   "kanji": "地震",
+   "kana": "じしん",
+   "en": [
+    "earthquake"
+   ]
+  },
+  {
+   "id": "すると|すると",
+   "kana": "すると",
+   "en": [
+    "and",
+    "then"
+   ]
+  },
+  {
+   "id": "止める|やめる",
+   "kanji": "止める",
+   "kana": "やめる",
+   "en": [
+    "to end",
+    "to stop"
+   ]
+  },
+  {
+   "id": "ガラス|ガラス",
+   "kana": "ガラス",
+   "en": [
+    "glass",
+    "pane"
+   ]
+  },
+  {
+   "id": "厳しい|きびしい",
+   "kanji": "厳しい",
+   "kana": "きびしい",
+   "en": [
+    "hard",
+    "rigorous",
+    "strict"
+   ]
+  },
+  {
+   "id": "エスカレーター|エスカレーター",
+   "kana": "エスカレーター",
+   "en": [
+    "escalator"
+   ]
+  },
+  {
+   "id": "人口|じんこう",
+   "kanji": "人口",
+   "kana": "じんこう",
+   "en": [
+    "population"
+   ]
+  },
+  {
+   "id": "月|つき",
+   "kanji": "月",
+   "kana": "つき",
+   "en": [
+    "moon"
+   ]
+  },
+  {
+   "id": "絹|きぬ",
+   "kanji": "絹",
+   "kana": "きぬ",
+   "en": [
+    "silk"
+   ]
+  },
+  {
+   "id": "ちっとも|ちっとも",
+   "kana": "ちっとも",
+   "en": [
+    "not at all (neg. verb)",
+    "not at all"
+   ]
+  },
+  {
+   "id": "深い|ふかい",
+   "kanji": "深い",
+   "kana": "ふかい",
+   "en": [
+    "deep",
+    "profound"
+   ]
+  },
+  {
+   "id": "壊れる|こわれる",
+   "kanji": "壊れる",
+   "kana": "こわれる",
+   "en": [
+    "to be broken",
+    "to break"
+   ]
+  },
+  {
+   "id": "揺れる|ゆれる",
+   "kanji": "揺れる",
+   "kana": "ゆれる",
+   "en": [
+    "to shake",
+    "to sway"
+   ]
+  },
+  {
+   "id": "落る|おちる",
+   "kanji": "落る",
+   "kana": "おちる",
+   "en": [
+    "to fall",
+    "to drop"
+   ]
+  },
+  {
+   "id": "できるだけ|できるだけ",
+   "kana": "できるだけ",
+   "en": [
+    "if at all possible",
+    "as much as possible"
+   ]
+  },
+  {
+   "id": "悲しい|かなしい",
+   "kanji": "悲しい",
+   "kana": "かなしい",
+   "en": [
+    "sad",
+    "sorrowful"
+   ]
+  },
+  {
+   "id": "中学校|ちゅうがっこう",
+   "kanji": "中学校",
+   "kana": "ちゅうがっこう",
+   "en": [
+    "junior high school pupil"
+   ]
+  },
+  {
+   "id": "ガス|ガス",
+   "kana": "ガス",
+   "en": [
+    "gas"
+   ]
+  },
+  {
+   "id": "祈る|いのる",
+   "kanji": "祈る",
+   "kana": "いのる",
+   "en": [
+    "to pray",
+    "to wish"
+   ]
+  },
+  {
+   "id": "盛ん|さかん",
+   "kanji": "盛ん",
+   "kana": "さかん",
+   "en": [
+    "prosperous",
+    "active",
+    "thriving"
+   ]
+  },
+  {
+   "id": "アルバイト|アルバイト",
+   "kana": "アルバイト",
+   "en": [
+    "part-time job"
+   ]
+  },
+  {
+   "id": "起こす|おこす",
+   "kanji": "起こす",
+   "kana": "おこす",
+   "en": [
+    "to wake (someone) up",
+    "to wake up"
+   ]
+  },
+  {
+   "id": "致す|いたす",
+   "kanji": "致す",
+   "kana": "いたす",
+   "en": [
+    "-- extra-modest expression for する --"
+   ]
+  },
+  {
+   "id": "噛む|かむ",
+   "kanji": "噛む",
+   "kana": "かむ",
+   "en": [
+    "to bite",
+    "to chew"
+   ]
+  },
+  {
+   "id": "赤ちゃん|あかちゃん",
+   "kanji": "赤ちゃん",
+   "kana": "あかちゃん",
+   "en": [
+    "baby",
+    "infant"
+   ]
+  },
+  {
+   "id": "浅い|あさい",
+   "kanji": "浅い",
+   "kana": "あさい",
+   "en": [
+    "shallow",
+    "superficial"
+   ]
+  },
+  {
+   "id": "嘘|うそ",
+   "kanji": "嘘",
+   "kana": "うそ",
+   "en": [
+    "lie"
+   ]
+  },
+  {
+   "id": "小説|しょうせつ",
+   "kanji": "小説",
+   "kana": "しょうせつ",
+   "en": [
+    "novel"
+   ]
+  },
+  {
+   "id": "親|おや",
+   "kanji": "親",
+   "kana": "おや",
+   "en": [
+    "a parent"
+   ]
+  },
+  {
+   "id": "それに|それに",
+   "kana": "それに",
+   "en": [
+    "moreover",
+    "besides"
+   ]
+  },
+  {
+   "id": "西洋|せいよう",
+   "kanji": "西洋",
+   "kana": "せいよう",
+   "en": [
+    "the West",
+    "Western countries"
+   ]
+  },
+  {
+   "id": "思う|おもう",
+   "kanji": "思う",
+   "kana": "おもう",
+   "en": [
+    "to think",
+    "to feel"
+   ]
+  },
+  {
+   "id": "パート|パート",
+   "kana": "パート",
+   "alt": [
+    "パートタイム"
+   ],
+   "en": [
+    "part time (esp. female part time employees)",
+    "part time"
+   ]
+  },
+  {
+   "id": "時代|じだい",
+   "kanji": "時代",
+   "kana": "じだい",
+   "en": [
+    "age",
+    "period",
+    "epoch",
+    "era"
+   ]
+  },
+  {
+   "id": "申し上げる|もうしあげる",
+   "kanji": "申し上げる",
+   "kana": "もうしあげる",
+   "en": [
+    "(humble)to say",
+    "to say",
+    "to tell"
+   ]
+  },
+  {
+   "id": "出席|しゅっせきする",
+   "kanji": "出席",
+   "kana": "しゅっせきする",
+   "en": [
+    "attendance"
+   ]
+  },
+  {
+   "id": "迎える|むかえる",
+   "kanji": "迎える",
+   "kana": "むかえる",
+   "en": [
+    "to welcome",
+    "to meet",
+    "to greet"
+   ]
+  },
+  {
+   "id": "触る|さわる",
+   "kanji": "触る",
+   "kana": "さわる",
+   "en": [
+    "to touch",
+    "to feel"
+   ]
+  },
+  {
+   "id": "社長|しゃちょう",
+   "kanji": "社長",
+   "kana": "しゃちょう",
+   "en": [
+    "president of a company"
+   ]
+  },
+  {
+   "id": "動物園|どうぶつえん",
+   "kanji": "動物園",
+   "kana": "どうぶつえん",
+   "en": [
+    "zoo"
+   ]
+  },
+  {
+   "id": "捕まえる|つかまえる",
+   "kanji": "捕まえる",
+   "kana": "つかまえる",
+   "en": [
+    "to catch",
+    "to arrest"
+   ]
+  },
+  {
+   "id": "季節|きせつ",
+   "kanji": "季節",
+   "kana": "きせつ",
+   "en": [
+    "season (in reference to weather)",
+    "season"
+   ]
+  },
+  {
+   "id": "寄る|よる",
+   "kanji": "寄る",
+   "kana": "よる",
+   "en": [
+    "to stop by"
+   ]
+  },
+  {
+   "id": "決まる|きまる",
+   "kanji": "決まる",
+   "kana": "きまる",
+   "en": [
+    "to be set",
+    "fixed"
+   ]
+  },
+  {
+   "id": "開く|ひらく",
+   "kanji": "開く",
+   "kana": "ひらく",
+   "en": [
+    "to open",
+    "to hold"
+   ]
+  },
+  {
+   "id": "逃げる|にげる",
+   "kanji": "逃げる",
+   "kana": "にげる",
+   "en": [
+    "to escape",
+    "to run away"
+   ]
+  },
+  {
+   "id": "だから|だから",
+   "kana": "だから",
+   "en": [
+    "so",
+    "therefore"
+   ]
+  },
+  {
+   "id": "残念|ざんねん",
+   "kanji": "残念",
+   "kana": "ざんねん",
+   "en": [
+    "regret",
+    "regrettable"
+   ]
+  },
+  {
+   "id": "畳|たたみ",
+   "kanji": "畳",
+   "kana": "たたみ",
+   "en": [
+    "tatami mat (Japanese straw mat)",
+    "tatami mat"
+   ]
+  },
+  {
+   "id": "丁寧|ていねい",
+   "kanji": "丁寧",
+   "kana": "ていねい",
+   "en": [
+    "polite",
+    "courteous",
+    "careful"
+   ]
+  },
+  {
+   "id": "地理|ちり",
+   "kanji": "地理",
+   "kana": "ちり",
+   "en": [
+    "geography"
+   ]
+  },
+  {
+   "id": "さっき|さっき",
+   "kana": "さっき",
+   "en": [
+    "a little while ago"
+   ]
+  },
+  {
+   "id": "怖い|こわい",
+   "kanji": "怖い",
+   "kana": "こわい",
+   "en": [
+    "scary",
+    "frightening"
+   ]
+  },
+  {
+   "id": "包む|つつむ",
+   "kanji": "包む",
+   "kana": "つつむ",
+   "en": [
+    "to wrap",
+    "to cover"
+   ]
+  },
+  {
+   "id": "なるべく|なるべく",
+   "kana": "なるべく",
+   "en": [
+    "if possible",
+    "as much as possible"
+   ]
+  },
+  {
+   "id": "無理|むり",
+   "kanji": "無理",
+   "kana": "むり",
+   "en": [
+    "unreasonable",
+    "impossible"
+   ]
+  },
+  {
+   "id": "サンドイッチ|サンドイッチ",
+   "kana": "サンドイッチ",
+   "en": [
+    "sandwich"
+   ]
+  },
+  {
+   "id": "会議室|かいぎしつ",
+   "kanji": "会議室",
+   "kana": "かいぎしつ",
+   "en": [
+    "conference room"
+   ]
+  },
+  {
+   "id": "品物|しなもの",
+   "kanji": "品物",
+   "kana": "しなもの",
+   "en": [
+    "goods"
+   ]
+  },
+  {
+   "id": "人形|にんぎょう",
+   "kanji": "人形",
+   "kana": "にんぎょう",
+   "en": [
+    "doll",
+    "figure"
+   ]
+  },
+  {
+   "id": "利用|りよう",
+   "kanji": "利用",
+   "kana": "りよう",
+   "en": [
+    "use",
+    "utilization"
+   ]
+  },
+  {
+   "id": "飾る|かざる",
+   "kanji": "飾る",
+   "kana": "かざる",
+   "en": [
+    "to decorate",
+    "to adorn"
+   ]
+  },
+  {
+   "id": "止める|とめる",
+   "kanji": "止める",
+   "kana": "とめる",
+   "en": [
+    "to stop (something)",
+    "to stop"
+   ]
+  },
+  {
+   "id": "恥ずかしい|はずかしい",
+   "kanji": "恥ずかしい",
+   "kana": "はずかしい",
+   "en": [
+    "ashamed",
+    "embarrassed"
+   ]
+  },
+  {
+   "id": "用事|ようじ",
+   "kanji": "用事",
+   "kana": "ようじ",
+   "en": [
+    "business to take care of",
+    "tasks",
+    "errands"
+   ]
+  },
+  {
+   "id": "ビル|ビル",
+   "kana": "ビル",
+   "en": [
+    "(abbr.) building",
+    "building"
+   ]
+  },
+  {
+   "id": "けんかする|けんかする",
+   "kana": "けんかする",
+   "en": [
+    "quarrel"
+   ]
+  },
+  {
+   "id": "頑張る|がんばる",
+   "kanji": "頑張る",
+   "kana": "がんばる",
+   "en": [
+    "to try one's best",
+    "to try hard",
+    "to persist"
+   ]
+  },
+  {
+   "id": "投げる|なげる",
+   "kanji": "投げる",
+   "kana": "なげる",
+   "en": [
+    "to pitch",
+    "to cast away"
+   ]
+  },
+  {
+   "id": "故障|こしょうする",
+   "kanji": "故障",
+   "kana": "こしょうする",
+   "en": [
+    "breakdown"
+   ]
+  },
+  {
+   "id": "力|ちから",
+   "kanji": "力",
+   "kana": "ちから",
+   "en": [
+    "strength",
+    "power"
+   ]
+  },
+  {
+   "id": "受ける|うける",
+   "kanji": "受ける",
+   "kana": "うける",
+   "en": [
+    "to take (an examination, interview, etc.)",
+    "to take",
+    "to receive"
+   ]
+  },
+  {
+   "id": "気分|きぶん",
+   "kanji": "気分",
+   "kana": "きぶん",
+   "en": [
+    "feeling",
+    "mood"
+   ]
+  },
+  {
+   "id": "間違える|まちがえる",
+   "kanji": "間違える",
+   "kana": "まちがえる",
+   "en": [
+    "to make a mistake"
+   ]
+  },
+  {
+   "id": "そんな|そんな",
+   "kana": "そんな",
+   "en": [
+    "such",
+    "like that",
+    "that sort of"
+   ]
+  },
+  {
+   "id": "星|ほし",
+   "kanji": "星",
+   "kana": "ほし",
+   "en": [
+    "star"
+   ]
+  },
+  {
+   "id": "場合|ばあい",
+   "kanji": "場合",
+   "kana": "ばあい",
+   "en": [
+    "case",
+    "situation"
+   ]
+  },
+  {
+   "id": "やっと|やっと",
+   "kana": "やっと",
+   "en": [
+    "at last",
+    "finally"
+   ]
+  },
+  {
+   "id": "足りる|たりる",
+   "kanji": "足りる",
+   "kana": "たりる",
+   "en": [
+    "to be sufficient",
+    "to be enough"
+   ]
+  },
+  {
+   "id": "行う|おこなう",
+   "kanji": "行う",
+   "kana": "おこなう",
+   "en": [
+    "to carry out",
+    "to conduct"
+   ]
+  },
+  {
+   "id": "ぶどう|ぶどう",
+   "kana": "ぶどう",
+   "en": [
+    "grapes"
+   ]
+  },
+  {
+   "id": "無くなる|なくなる",
+   "kanji": "無くなる",
+   "kana": "なくなる",
+   "en": [
+    "to disappear",
+    "to get lost"
+   ]
+  },
+  {
+   "id": "準備|じゅんびする",
+   "kanji": "準備",
+   "kana": "じゅんびする",
+   "en": [
+    "prepare"
+   ]
+  },
+  {
+   "id": "世界|せかい",
+   "kanji": "世界",
+   "kana": "せかい",
+   "en": [
+    "world"
+   ]
+  },
+  {
+   "id": "住所|じゅうしょ",
+   "kanji": "住所",
+   "kana": "じゅうしょ",
+   "en": [
+    "address",
+    "place of residence"
+   ]
+  },
+  {
+   "id": "再来月|さらいげつ",
+   "kanji": "再来月",
+   "kana": "さらいげつ",
+   "en": [
+    "the month after next"
+   ]
+  },
+  {
+   "id": "林|はやし",
+   "kanji": "林",
+   "kana": "はやし",
+   "en": [
+    "woods",
+    "forest"
+   ]
+  },
+  {
+   "id": "倍|ばい",
+   "kanji": "倍",
+   "kana": "ばい",
+   "en": [
+    "double"
+   ]
+  },
+  {
+   "id": "痩せる|やせる",
+   "kanji": "痩せる",
+   "kana": "やせる",
+   "en": [
+    "to lose weight"
+   ]
+  },
+  {
+   "id": "線|せん",
+   "kanji": "線",
+   "kana": "せん",
+   "en": [
+    "line",
+    "wire"
+   ]
+  },
+  {
+   "id": "戦争|せんそう",
+   "kanji": "戦争",
+   "kana": "せんそう",
+   "en": [
+    "war"
+   ]
+  },
+  {
+   "id": "決める|きめる",
+   "kanji": "決める",
+   "kana": "きめる",
+   "en": [
+    "to decide (v.t.)",
+    "to decide"
+   ]
+  },
+  {
+   "id": "調べる|しらべる",
+   "kanji": "調べる",
+   "kana": "しらべる",
+   "en": [
+    "to check",
+    "to look up",
+    "to inquire",
+    "to search"
+   ]
+  },
+  {
+   "id": "寝坊|ねぼう",
+   "kanji": "寝坊",
+   "kana": "ねぼう",
+   "en": [
+    "sleeping in late"
+   ]
+  },
+  {
+   "id": "パパ|パパ",
+   "kana": "パパ",
+   "en": [
+    "papa",
+    "daddy"
+   ]
+  },
+  {
+   "id": "光る|ひかる",
+   "kanji": "光る",
+   "kana": "ひかる",
+   "en": [
+    "to shine",
+    "to glitter"
+   ]
+  },
+  {
+   "id": "夫|おっと",
+   "kanji": "夫",
+   "kana": "おっと",
+   "en": [
+    "husband"
+   ]
+  },
+  {
+   "id": "雲|くも",
+   "kanji": "雲",
+   "kana": "くも",
+   "en": [
+    "cloud"
+   ]
+  },
+  {
+   "id": "坂|さか",
+   "kanji": "坂",
+   "kana": "さか",
+   "en": [
+    "slope",
+    "hill"
+   ]
+  },
+  {
+   "id": "飛行場|ひこうじょう",
+   "kanji": "飛行場",
+   "kana": "ひこうじょう",
+   "en": [
+    "airport"
+   ]
+  },
+  {
+   "id": "柔道|じゅうどう",
+   "kanji": "柔道",
+   "kana": "じゅうどう",
+   "en": [
+    "judo"
+   ]
+  },
+  {
+   "id": "決して|けっして",
+   "kanji": "決して",
+   "kana": "けっして",
+   "en": [
+    "never"
+   ]
+  },
+  {
+   "id": "事務所|じむしょ",
+   "kanji": "事務所",
+   "kana": "じむしょ",
+   "en": [
+    "office"
+   ]
+  },
+  {
+   "id": "連絡|れんらく",
+   "kanji": "連絡",
+   "kana": "れんらく",
+   "en": [
+    "communication",
+    "contact",
+    "connection"
+   ]
+  },
+  {
+   "id": "小学校|しょうがっこう",
+   "kanji": "小学校",
+   "kana": "しょうがっこう",
+   "en": [
+    "elementary school"
+   ]
+  },
+  {
+   "id": "客|きゃく",
+   "kanji": "客",
+   "kana": "きゃく",
+   "en": [
+    "guest",
+    "customer"
+   ]
+  },
+  {
+   "id": "昔|むかし",
+   "kanji": "昔",
+   "kana": "むかし",
+   "en": [
+    "old days",
+    "past"
+   ]
+  },
+  {
+   "id": "美しい|うつくしい",
+   "kanji": "美しい",
+   "kana": "うつくしい",
+   "en": [
+    "beautiful",
+    "lovely"
+   ]
+  },
+  {
+   "id": "捨てる|すてる",
+   "kanji": "捨てる",
+   "kana": "すてる",
+   "en": [
+    "throw away (trash)",
+    "throw away",
+    "dump",
+    "discard"
+   ]
+  },
+  {
+   "id": "なさる|なさる",
+   "kana": "なさる",
+   "en": [
+    "-- honorific expression for する --"
+   ]
+  },
+  {
+   "id": "事|こと",
+   "kanji": "事",
+   "kana": "こと",
+   "en": [
+    "thing(s)",
+    "thing",
+    "matter",
+    "fact"
+   ]
+  },
+  {
+   "id": "どんどん|どんどん",
+   "kana": "どんどん",
+   "en": [
+    "quickly and steadily",
+    "at a rapid pace"
+   ]
+  },
+  {
+   "id": "試合|しあい",
+   "kanji": "試合",
+   "kana": "しあい",
+   "en": [
+    "match",
+    "game",
+    "competition"
+   ]
+  },
+  {
+   "id": "適当|てきとう",
+   "kanji": "適当",
+   "kana": "てきとう",
+   "en": [
+    "fitness",
+    "suitability"
+   ]
+  },
+  {
+   "id": "素晴らしい|すばらしい",
+   "kanji": "素晴らしい",
+   "kana": "すばらしい",
+   "en": [
+    "wonderful",
+    "terrific"
+   ]
+  },
+  {
+   "id": "美術館|びじゅつかん",
+   "kanji": "美術館",
+   "kana": "びじゅつかん",
+   "en": [
+    "art gallery",
+    "art museum"
+   ]
+  },
+  {
+   "id": "文法|ぶんぽう",
+   "kanji": "文法",
+   "kana": "ぶんぽう",
+   "en": [
+    "grammar"
+   ]
+  },
+  {
+   "id": "終わり|おわり",
+   "kanji": "終わり",
+   "kana": "おわり",
+   "en": [
+    "end"
+   ]
+  },
+  {
+   "id": "壁|かべ",
+   "kanji": "壁",
+   "kana": "かべ",
+   "en": [
+    "wall"
+   ]
+  },
+  {
+   "id": "一度|いちど",
+   "kanji": "一度",
+   "kana": "いちど",
+   "en": [
+    "once",
+    "one time"
+   ]
+  },
+  {
+   "id": "お礼|おれい",
+   "kanji": "お礼",
+   "kana": "おれい",
+   "en": [
+    "expression of gratitude",
+    "thanking",
+    "gift of appreciation",
+    "bow"
+   ]
+  },
+  {
+   "id": "親切|しんせつ",
+   "kanji": "親切",
+   "kana": "しんせつ",
+   "en": [
+    "kindness"
+   ]
+  },
+  {
+   "id": "知らせる|しらせる",
+   "kanji": "知らせる",
+   "kana": "しらせる",
+   "en": [
+    "to notify"
+   ]
+  },
+  {
+   "id": "歯医者|はいしゃ",
+   "kanji": "歯医者",
+   "kana": "はいしゃ",
+   "en": [
+    "dentist"
+   ]
+  },
+  {
+   "id": "熱心|ねっしん",
+   "kanji": "熱心",
+   "kana": "ねっしん",
+   "en": [
+    "enthusiasm"
+   ]
+  },
+  {
+   "id": "始める|はじめる",
+   "kanji": "始める",
+   "kana": "はじめる",
+   "en": [
+    "to start",
+    "to begin"
+   ]
+  },
+  {
+   "id": "もらう|もらう",
+   "kana": "もらう",
+   "en": [
+    "to receive"
+   ]
+  },
+  {
+   "id": "泣く|なく",
+   "kanji": "泣く",
+   "kana": "なく",
+   "en": [
+    "to cry"
+   ]
+  },
+  {
+   "id": "治る|なおる",
+   "kanji": "治る",
+   "kana": "なおる",
+   "en": [
+    "to get better",
+    "to recover from illness"
+   ]
+  },
+  {
+   "id": "熱|ねつ",
+   "kanji": "熱",
+   "kana": "ねつ",
+   "en": [
+    "fever",
+    "temperature"
+   ]
+  },
+  {
+   "id": "お祭り|おまつり",
+   "kanji": "お祭り",
+   "kana": "おまつり",
+   "en": [
+    "festival"
+   ]
+  },
+  {
+   "id": "水道|すいどう",
+   "kanji": "水道",
+   "kana": "すいどう",
+   "en": [
+    "water service",
+    "water line"
+   ]
+  },
+  {
+   "id": "匂い|におい",
+   "kanji": "匂い",
+   "kana": "におい",
+   "en": [
+    "odor",
+    "smell"
+   ]
+  },
+  {
+   "id": "ベル|ベル",
+   "kana": "ベル",
+   "en": [
+    "bell"
+   ]
+  },
+  {
+   "id": "赤ん坊|あかんぼう",
+   "kanji": "赤ん坊",
+   "kana": "あかんぼう",
+   "en": [
+    "baby"
+   ]
+  },
+  {
+   "id": "おかしい|おかしい",
+   "kana": "おかしい",
+   "en": [
+    "strange",
+    "odd",
+    "funny"
+   ]
+  },
+  {
+   "id": "事故|じこ",
+   "kanji": "事故",
+   "kana": "じこ",
+   "en": [
+    "accident"
+   ]
+  },
+  {
+   "id": "変|へん",
+   "kanji": "変",
+   "kana": "へん",
+   "en": [
+    "strange",
+    "odd"
+   ]
+  },
+  {
+   "id": "辞典|じてん",
+   "kanji": "辞典",
+   "kana": "じてん",
+   "en": [
+    "encyclopedia",
+    "reference book"
+   ]
+  },
+  {
+   "id": "残る|のこる",
+   "kanji": "残る",
+   "kana": "のこる",
+   "en": [
+    "to remain (v.i.)",
+    "to remain",
+    "to be left"
+   ]
+  },
+  {
+   "id": "立てる|たてる",
+   "kanji": "立てる",
+   "kana": "たてる",
+   "en": [
+    "to stand (something) up",
+    "to stand up",
+    "to erect"
+   ]
+  },
+  {
+   "id": "くれる|くれる",
+   "kana": "くれる",
+   "en": [
+    "to give",
+    "to do for"
+   ]
+  },
+  {
+   "id": "原因|げんいん",
+   "kanji": "原因",
+   "kana": "げんいん",
+   "en": [
+    "cause",
+    "origin",
+    "source"
+   ]
+  },
+  {
+   "id": "驚く|おどろく",
+   "kanji": "驚く",
+   "kana": "おどろく",
+   "en": [
+    "to be surprised",
+    "to be astonished"
+   ]
+  },
+  {
+   "id": "祖母|そぼ",
+   "kanji": "祖母",
+   "kana": "そぼ",
+   "en": [
+    "grandmother"
+   ]
+  },
+  {
+   "id": "場所|ばしょ",
+   "kanji": "場所",
+   "kana": "ばしょ",
+   "en": [
+    "place",
+    "location"
+   ]
+  },
+  {
+   "id": "答|こたえ",
+   "kanji": "答",
+   "kana": "こたえ",
+   "en": [
+    "answer",
+    "response"
+   ]
+  },
+  {
+   "id": "もちろん|もちろん",
+   "kana": "もちろん",
+   "en": [
+    "certainly",
+    "of course"
+   ]
+  },
+  {
+   "id": "漬ける|つける",
+   "kanji": "漬ける",
+   "kana": "つける",
+   "en": [
+    "to soak",
+    "to moisten",
+    "to pickle"
+   ]
+  },
+  {
+   "id": "受付|うけつけ",
+   "kanji": "受付",
+   "kana": "うけつけ",
+   "en": [
+    "reception(ist) desk",
+    "reception desk"
+   ]
+  },
+  {
+   "id": "内|うち",
+   "kanji": "内",
+   "kana": "うち",
+   "en": [
+    "within",
+    "inside"
+   ]
+  },
+  {
+   "id": "スクリーン|スクリーン",
+   "kana": "スクリーン",
+   "en": [
+    "screen"
+   ]
+  },
+  {
+   "id": "増える|ふえる",
+   "kanji": "増える",
+   "kana": "ふえる",
+   "en": [
+    "to increase",
+    "to multiply"
+   ]
+  },
+  {
+   "id": "または|または",
+   "kana": "または",
+   "en": [
+    "or",
+    "otherwise"
+   ]
+  },
+  {
+   "id": "けがする|けがする",
+   "kana": "けがする",
+   "en": [
+    "injury (to animate object)",
+    "injury",
+    "hurt"
+   ]
+  },
+  {
+   "id": "以下|いか",
+   "kanji": "以下",
+   "kana": "いか",
+   "en": [
+    "less than",
+    "below"
+   ]
+  },
+  {
+   "id": "選ぶ|えらぶ",
+   "kanji": "選ぶ",
+   "kana": "えらぶ",
+   "en": [
+    "to choose",
+    "to select"
+   ]
+  },
+  {
+   "id": "心|こころ",
+   "kanji": "心",
+   "kana": "こころ",
+   "en": [
+    "heart",
+    "mind"
+   ]
+  },
+  {
+   "id": "サラダ|サラダ",
+   "kana": "サラダ",
+   "en": [
+    "salad"
+   ]
+  },
+  {
+   "id": "届ける|とどける",
+   "kanji": "届ける",
+   "kana": "とどける",
+   "en": [
+    "to deliver (v.t.)",
+    "to deliver"
+   ]
+  },
+  {
+   "id": "挨拶|あいさつする",
+   "kanji": "挨拶",
+   "kana": "あいさつする",
+   "en": [
+    "greet(ing)",
+    "greet"
+   ]
+  },
+  {
+   "id": "景色|けしき",
+   "kanji": "景色",
+   "kana": "けしき",
+   "en": [
+    "scenery",
+    "landscape"
+   ]
+  },
+  {
+   "id": "確か|たしか",
+   "kanji": "確か",
+   "kana": "たしか",
+   "en": [
+    "if I remember correctly",
+    "certain",
+    "definite"
+   ]
+  },
+  {
+   "id": "ステーキ|ステーキ",
+   "kana": "ステーキ",
+   "en": [
+    "steak"
+   ]
+  },
+  {
+   "id": "食料品|しょくりょうひん",
+   "kanji": "食料品",
+   "kana": "しょくりょうひん",
+   "en": [
+    "foodstuff",
+    "groceries"
+   ]
+  },
+  {
+   "id": "森|もり",
+   "kanji": "森",
+   "kana": "もり",
+   "en": [
+    "forest"
+   ]
+  },
+  {
+   "id": "以内|いない",
+   "kanji": "以内",
+   "kana": "いない",
+   "en": [
+    "within",
+    "less than"
+   ]
+  },
+  {
+   "id": "予定|よてい",
+   "kanji": "予定",
+   "kana": "よてい",
+   "en": [
+    "plans",
+    "arrangement",
+    "schedule"
+   ]
+  },
+  {
+   "id": "オーバー|オーバー",
+   "kana": "オーバー",
+   "en": [
+    "overcoat",
+    "over",
+    "exceeding",
+    "exaggeration"
+   ]
+  },
+  {
+   "id": "乾く|かわく",
+   "kanji": "乾く",
+   "kana": "かわく",
+   "en": [
+    "to get dry"
+   ]
+  },
+  {
+   "id": "石|いし",
+   "kanji": "石",
+   "kana": "いし",
+   "en": [
+    "stone"
+   ]
+  },
+  {
+   "id": "思い出す|おもいだす",
+   "kanji": "思い出す",
+   "kana": "おもいだす",
+   "en": [
+    "to recall",
+    "to remember"
+   ]
+  },
+  {
+   "id": "踊る|おどる",
+   "kanji": "踊る",
+   "kana": "おどる",
+   "en": [
+    "to dance"
+   ]
+  },
+  {
+   "id": "細かい|こまかい",
+   "kanji": "細かい",
+   "kana": "こまかい",
+   "en": [
+    "small",
+    "fine",
+    "minute"
+   ]
+  },
+  {
+   "id": "塗る|ぬる",
+   "kanji": "塗る",
+   "kana": "ぬる",
+   "en": [
+    "to paint",
+    "to plaster"
+   ]
+  },
+  {
+   "id": "ご主人|ごしゅじん",
+   "kanji": "ご主人",
+   "kana": "ごしゅじん",
+   "en": [
+    "(your, her) husband",
+    "husband"
+   ]
+  },
+  {
+   "id": "珍しい|めずらしい",
+   "kanji": "珍しい",
+   "kana": "めずらしい",
+   "en": [
+    "unusual",
+    "rare"
+   ]
+  },
+  {
+   "id": "用|よう",
+   "kanji": "用",
+   "kana": "よう",
+   "en": [
+    "errand",
+    "task",
+    "business"
+   ]
+  },
+  {
+   "id": "公務員|こうむいん",
+   "kanji": "公務員",
+   "kana": "こうむいん",
+   "en": [
+    "government worker",
+    "public servant"
+   ]
+  },
+  {
+   "id": "お嬢さん|おじょうさん",
+   "kanji": "お嬢さん",
+   "kana": "おじょうさん",
+   "en": [
+    "(someone's) daughter (polite)",
+    "daughter"
+   ]
+  },
+  {
+   "id": "用意|ようい",
+   "kanji": "用意",
+   "kana": "ようい",
+   "en": [
+    "preparation"
+   ]
+  },
+  {
+   "id": "探す|さがす",
+   "kanji": "探す",
+   "kana": "さがす",
+   "en": [
+    "to search",
+    "to seek",
+    "to look for"
+   ]
+  },
+  {
+   "id": "形|かたち",
+   "kanji": "形",
+   "kana": "かたち",
+   "en": [
+    "shape"
+   ]
+  },
+  {
+   "id": "運転|うんてんする",
+   "kanji": "運転",
+   "kana": "うんてんする",
+   "en": [
+    "driving"
+   ]
+  },
+  {
+   "id": "すっかり|すっかり",
+   "kana": "すっかり",
+   "en": [
+    "all",
+    "completely"
+   ]
+  },
+  {
+   "id": "アナウンサー|アナウンサー",
+   "kana": "アナウンサー",
+   "en": [
+    "announcer"
+   ]
+  },
+  {
+   "id": "お土産|おみやげ",
+   "kanji": "お土産",
+   "kana": "おみやげ",
+   "en": [
+    "souvenir"
+   ]
+  },
+  {
+   "id": "消しゴム|けしゴム",
+   "kanji": "消しゴム",
+   "kana": "けしゴム",
+   "en": [
+    "eraser"
+   ]
+  },
+  {
+   "id": "旅館|りょかん",
+   "kanji": "旅館",
+   "kana": "りょかん",
+   "en": [
+    "a Japanese inn"
+   ]
+  },
+  {
+   "id": "海岸|かいがん",
+   "kanji": "海岸",
+   "kana": "かいがん",
+   "en": [
+    "coast",
+    "seashore"
+   ]
+  },
+  {
+   "id": "寂しい|さびしい",
+   "kanji": "寂しい",
+   "kana": "さびしい",
+   "en": [
+    "lonely",
+    "lonesome"
+   ]
+  },
+  {
+   "id": "火|ひ",
+   "kanji": "火",
+   "kana": "ひ",
+   "en": [
+    "fire"
+   ]
+  },
+  {
+   "id": "育てる|そだてる",
+   "kanji": "育てる",
+   "kana": "そだてる",
+   "en": [
+    "to raise (v.t.)",
+    "to raise",
+    "to bring up"
+   ]
+  },
+  {
+   "id": "味噌|みそ",
+   "kanji": "味噌",
+   "kana": "みそ",
+   "en": [
+    "miso",
+    "bean paste"
+   ]
+  },
+  {
+   "id": "お祝い|おいわい",
+   "kanji": "お祝い",
+   "kana": "おいわい",
+   "en": [
+    "congratulation",
+    "celebration"
+   ]
+  },
+  {
+   "id": "乗り物|のりもの",
+   "kanji": "乗り物",
+   "kana": "のりもの",
+   "en": [
+    "vehicle"
+   ]
+  },
+  {
+   "id": "案内|あんないする",
+   "kanji": "案内",
+   "kana": "あんないする",
+   "en": [
+    "information",
+    "guidance"
+   ]
+  },
+  {
+   "id": "通う|かよう",
+   "kanji": "通う",
+   "kana": "かよう",
+   "en": [
+    "to go back and forth",
+    "to commute"
+   ]
+  },
+  {
+   "id": "連れる|つれる",
+   "kanji": "連れる",
+   "kana": "つれる",
+   "en": [
+    "to lead",
+    "to take"
+   ]
+  },
+  {
+   "id": "技術|ぎじゅつ",
+   "kanji": "技術",
+   "kana": "ぎじゅつ",
+   "en": [
+    "technique",
+    "technology",
+    "skill"
+   ]
+  },
+  {
+   "id": "小鳥|ことり",
+   "kanji": "小鳥",
+   "kana": "ことり",
+   "en": [
+    "small bird"
+   ]
+  },
+  {
+   "id": "下宿|げしゅく",
+   "kanji": "下宿",
+   "kana": "げしゅく",
+   "en": [
+    "lodging",
+    "boarding house"
+   ]
+  },
+  {
+   "id": "ジャム|ジャム",
+   "kana": "ジャム",
+   "en": [
+    "jam"
+   ]
+  },
+  {
+   "id": "招待|しょうたいする",
+   "kanji": "招待",
+   "kana": "しょうたいする",
+   "en": [
+    "invitation"
+   ]
+  },
+  {
+   "id": "鏡|かがみ",
+   "kanji": "鏡",
+   "kana": "かがみ",
+   "en": [
+    "mirror"
+   ]
+  },
+  {
+   "id": "はず|はず",
+   "kana": "はず",
+   "en": [
+    "it should be so"
+   ]
+  },
+  {
+   "id": "法律|ほうりつ",
+   "kanji": "法律",
+   "kana": "ほうりつ",
+   "en": [
+    "law"
+   ]
+  },
+  {
+   "id": "進む|すすむ",
+   "kanji": "進む",
+   "kana": "すすむ",
+   "en": [
+    "to advance",
+    "to proceed"
+   ]
+  },
+  {
+   "id": "楽む|たのしむ",
+   "kanji": "楽む",
+   "kana": "たのしむ",
+   "en": [
+    "to enjoy"
+   ]
+  },
+  {
+   "id": "貿易|ぼうえき",
+   "kanji": "貿易",
+   "kana": "ぼうえき",
+   "en": [
+    "trade"
+   ]
+  },
+  {
+   "id": "反対|はんたい",
+   "kanji": "反対",
+   "kana": "はんたい",
+   "en": [
+    "oppose",
+    "opposition",
+    "resistance"
+   ]
+  },
+  {
+   "id": "おる|おる",
+   "kana": "おる",
+   "en": [
+    "-- extra-modest expression for いる --"
+   ]
+  },
+  {
+   "id": "申す|もうす",
+   "kanji": "申す",
+   "kana": "もうす",
+   "en": [
+    "-- extra-modest (humble) expression for 言う (いう) --",
+    "-- extra-modest expression for 言う --"
+   ]
+  },
+  {
+   "id": "試験|しけん",
+   "kanji": "試験",
+   "kana": "しけん",
+   "en": [
+    "an exam"
+   ]
+  },
+  {
+   "id": "真面目|まじめ",
+   "kanji": "真面目",
+   "kana": "まじめ",
+   "en": [
+    "diligent",
+    "serious"
+   ]
+  },
+  {
+   "id": "店員|てんいん",
+   "kanji": "店員",
+   "kana": "てんいん",
+   "en": [
+    "clerk",
+    "shop-employee"
+   ]
+  },
+  {
+   "id": "泊まる|とまる",
+   "kanji": "泊まる",
+   "kana": "とまる",
+   "en": [
+    "to stay (over night) (v.i.)",
+    "to stay"
+   ]
+  },
+  {
+   "id": "よろしい|よろしい",
+   "kana": "よろしい",
+   "en": [
+    "(hon.) good",
+    "good",
+    "OK",
+    "all right"
+   ]
+  },
+  {
+   "id": "今夜|こんや",
+   "kanji": "今夜",
+   "kana": "こんや",
+   "en": [
+    "this evening",
+    "tonight"
+   ]
+  },
+  {
+   "id": "おつり|おつり",
+   "kana": "おつり",
+   "en": [
+    "change",
+    "balance of money returned to the purchaser"
+   ]
+  },
+  {
+   "id": "チェックする|チェックする",
+   "kana": "チェックする",
+   "en": [
+    "check"
+   ]
+  },
+  {
+   "id": "会話|かいわ",
+   "kanji": "会話",
+   "kana": "かいわ",
+   "en": [
+    "conversation"
+   ]
+  },
+  {
+   "id": "空気|くうき",
+   "kanji": "空気",
+   "kana": "くうき",
+   "en": [
+    "air",
+    "atmosphere"
+   ]
+  },
+  {
+   "id": "交通|こうつう",
+   "kanji": "交通",
+   "kana": "こうつう",
+   "en": [
+    "traffic",
+    "transportation"
+   ]
+  },
+  {
+   "id": "ワープロ|ワープロ",
+   "kana": "ワープロ",
+   "en": [
+    "word processor"
+   ]
+  },
+  {
+   "id": "喜ぶ|よろこぶ",
+   "kanji": "喜ぶ",
+   "kana": "よろこぶ",
+   "en": [
+    "to rejoice",
+    "to be delighted",
+    "to be glad"
+   ]
+  },
+  {
+   "id": "急行|きゅうこう",
+   "kanji": "急行",
+   "kana": "きゅうこう",
+   "en": [
+    "express train or bus"
+   ]
+  },
+  {
+   "id": "皆|みな",
+   "kanji": "皆",
+   "kana": "みな",
+   "en": [
+    "everyone"
+   ]
+  },
+  {
+   "id": "味|あじ",
+   "kanji": "味",
+   "kana": "あじ",
+   "en": [
+    "flavor",
+    "taste"
+   ]
+  },
+  {
+   "id": "空港|くうこう",
+   "kanji": "空港",
+   "kana": "くうこう",
+   "en": [
+    "airport"
+   ]
+  },
+  {
+   "id": "手袋|てぶくろ",
+   "kanji": "手袋",
+   "kana": "てぶくろ",
+   "en": [
+    "glove(s)",
+    "glove"
+   ]
+  },
+  {
+   "id": "校長|こうちょう",
+   "kanji": "校長",
+   "kana": "こうちょう",
+   "en": [
+    "principal",
+    "headmaster"
+   ]
+  },
+  {
+   "id": "ごちそう|ごちそう",
+   "kana": "ごちそう",
+   "en": [
+    "feast",
+    "treating"
+   ]
+  },
+  {
+   "id": "踊り|おどり",
+   "kanji": "踊り",
+   "kana": "おどり",
+   "en": [
+    "dance"
+   ]
+  },
+  {
+   "id": "興味|きょうみ",
+   "kanji": "興味",
+   "kana": "きょうみ",
+   "en": [
+    "interest (in something)",
+    "interest"
+   ]
+  },
+  {
+   "id": "引っ越す|ひっこす",
+   "kanji": "引っ越す",
+   "kana": "ひっこす",
+   "en": [
+    "to move to a new place of residence"
+   ]
+  },
+  {
+   "id": "冷房|れいぼう",
+   "kanji": "冷房",
+   "kana": "れいぼう",
+   "en": [
+    "cooling",
+    "air conditioning"
+   ]
+  },
+  {
+   "id": "都合|つごう",
+   "kanji": "都合",
+   "kana": "つごう",
+   "en": [
+    "circumstances",
+    "convenience"
+   ]
+  },
+  {
+   "id": "遠慮|えんりょする",
+   "kanji": "遠慮",
+   "kana": "えんりょする",
+   "en": [
+    "restraint",
+    "reserve",
+    "hesitate"
+   ]
+  },
+  {
+   "id": "亡くなる|なくなる",
+   "kanji": "亡くなる",
+   "kana": "なくなる",
+   "en": [
+    "to pass away"
+   ]
+  },
+  {
+   "id": "科学|かがく",
+   "kanji": "科学",
+   "kana": "かがく",
+   "en": [
+    "science"
+   ]
+  },
+  {
+   "id": "はっきり|はっきり",
+   "kana": "はっきり",
+   "en": [
+    "clearly",
+    "distinctly"
+   ]
+  },
+  {
+   "id": "差し上げる|さしあげる",
+   "kanji": "差し上げる",
+   "kana": "さしあげる",
+   "en": [
+    "-- humble expression for あげる --"
+   ]
+  },
+  {
+   "id": "気持ち|きもち",
+   "kanji": "気持ち",
+   "kana": "きもち",
+   "en": [
+    "feeling",
+    "sensation",
+    "mood"
+   ]
+  },
+  {
+   "id": "祖父|そふ",
+   "kanji": "祖父",
+   "kana": "そふ",
+   "en": [
+    "grandfather"
+   ]
+  },
+  {
+   "id": "港|みなと",
+   "kanji": "港",
+   "kana": "みなと",
+   "en": [
+    "harbor",
+    "port"
+   ]
+  },
+  {
+   "id": "予約|よやく",
+   "kanji": "予約",
+   "kana": "よやく",
+   "en": [
+    "reservation"
+   ]
+  },
+  {
+   "id": "凄い|すごい",
+   "kanji": "凄い",
+   "kana": "すごい",
+   "en": [
+    "terrific",
+    "great"
+   ]
+  },
+  {
+   "id": "入学|にゅうがくする",
+   "kanji": "入学",
+   "kana": "にゅうがくする",
+   "en": [
+    "entry to school or university"
+   ]
+  },
+  {
+   "id": "片付ける|かたづける",
+   "kanji": "片付ける",
+   "kana": "かたづける",
+   "en": [
+    "to (clean) tidy up (v.t.)",
+    "to tidy up",
+    "to put away"
+   ]
+  },
+  {
+   "id": "写す|うつす",
+   "kanji": "写す",
+   "kana": "うつす",
+   "en": [
+    "to copy (v.t.)",
+    "to copy",
+    "to photograph"
+   ]
+  },
+  {
+   "id": "パソコン|パソコン",
+   "kana": "パソコン",
+   "en": [
+    "(personal) computer",
+    "computer"
+   ]
+  },
+  {
+   "id": "部長|ぶちょう",
+   "kanji": "部長",
+   "kana": "ぶちょう",
+   "en": [
+    "department (division) manager",
+    "department manager"
+   ]
+  },
+  {
+   "id": "火事|かじ",
+   "kanji": "火事",
+   "kana": "かじ",
+   "en": [
+    "fire"
+   ]
+  },
+  {
+   "id": "足す|たす",
+   "kanji": "足す",
+   "kana": "たす",
+   "en": [
+    "to add (numbers)",
+    "to add"
+   ]
+  },
+  {
+   "id": "教会|きょうかい",
+   "kanji": "教会",
+   "kana": "きょうかい",
+   "en": [
+    "church"
+   ]
+  },
+  {
+   "id": "彼ら|かれら",
+   "kanji": "彼ら",
+   "kana": "かれら",
+   "en": [
+    "they (usually male)",
+    "they"
+   ]
+  },
+  {
+   "id": "一杯|いっぱい",
+   "kanji": "一杯",
+   "kana": "いっぱい",
+   "en": [
+    "full",
+    "to the utmost"
+   ]
+  },
+  {
+   "id": "アメリカ|アメリカ",
+   "kana": "アメリカ",
+   "en": [
+    "America",
+    "U.S.A"
+   ]
+  },
+  {
+   "id": "男性|だんせい",
+   "kanji": "男性",
+   "kana": "だんせい",
+   "en": [
+    "man",
+    "male"
+   ]
+  },
+  {
+   "id": "理由|りゆう",
+   "kanji": "理由",
+   "kana": "りゆう",
+   "en": [
+    "reason"
+   ]
+  },
+  {
+   "id": "生産|せいさんする",
+   "kanji": "生産",
+   "kana": "せいさんする",
+   "en": [
+    "production",
+    "to produce"
+   ]
+  },
+  {
+   "id": "着物|きもの",
+   "kanji": "着物",
+   "kana": "きもの",
+   "en": [
+    "kimono",
+    "Japanese traditional dress"
+   ]
+  },
+  {
+   "id": "おもちゃ|おもちゃ",
+   "kana": "おもちゃ",
+   "en": [
+    "a toy"
+   ]
+  },
+  {
+   "id": "暮れる|くれる",
+   "kanji": "暮れる",
+   "kana": "くれる",
+   "en": [
+    "to get dark",
+    "to come to an end"
+   ]
+  },
+  {
+   "id": "釣る|つる",
+   "kanji": "釣る",
+   "kana": "つる",
+   "en": [
+    "to fish"
+   ]
+  },
+  {
+   "id": "打つ|うつ",
+   "kanji": "打つ",
+   "kana": "うつ",
+   "en": [
+    "to hit",
+    "to strike"
+   ]
+  },
+  {
+   "id": "あんな|あんな",
+   "kana": "あんな",
+   "en": [
+    "such",
+    "like that"
+   ]
+  },
+  {
+   "id": "謝る|あやまる",
+   "kanji": "謝る",
+   "kana": "あやまる",
+   "en": [
+    "to apologize"
+   ]
+  },
+  {
+   "id": "昼間|ひるま",
+   "kanji": "昼間",
+   "kana": "ひるま",
+   "en": [
+    "daytime",
+    "during the day"
+   ]
+  },
+  {
+   "id": "教育|きょういく",
+   "kanji": "教育",
+   "kana": "きょういく",
+   "en": [
+    "education"
+   ]
+  },
+  {
+   "id": "女性|じょせい",
+   "kanji": "女性",
+   "kana": "じょせい",
+   "en": [
+    "woman"
+   ]
+  },
+  {
+   "id": "米|こめ",
+   "kanji": "米",
+   "kana": "こめ",
+   "en": [
+    "uncooked rice"
+   ]
+  },
+  {
+   "id": "邪魔|じゃま",
+   "kanji": "邪魔",
+   "kana": "じゃま",
+   "en": [
+    "hindrance",
+    "intrusion"
+   ]
+  },
+  {
+   "id": "国際|こくさい",
+   "kanji": "国際",
+   "kana": "こくさい",
+   "en": [
+    "international"
+   ]
+  },
+  {
+   "id": "隅|すみ",
+   "kanji": "隅",
+   "kana": "すみ",
+   "en": [
+    "corner"
+   ]
+  },
+  {
+   "id": "伺う|うかがう",
+   "kanji": "伺う",
+   "kana": "うかがう",
+   "en": [
+    "humble form of 行く (いく)",
+    "humble form of 行く",
+    "聞く and 来る"
+   ]
+  },
+  {
+   "id": "再来週|さらいしゅう",
+   "kanji": "再来週",
+   "kana": "さらいしゅう",
+   "en": [
+    "the week after next"
+   ]
+  },
+  {
+   "id": "夢|ゆめ",
+   "kanji": "夢",
+   "kana": "ゆめ",
+   "en": [
+    "a dream"
+   ]
+  },
+  {
+   "id": "喉|のど",
+   "kanji": "喉",
+   "kana": "のど",
+   "en": [
+    "throat"
+   ]
+  },
+  {
+   "id": "最近|さいきん",
+   "kanji": "最近",
+   "kana": "さいきん",
+   "en": [
+    "recently",
+    "nowadays",
+    "in recent years",
+    "most recent",
+    "latest"
+   ]
+  },
+  {
+   "id": "周り|まわり",
+   "kanji": "周り",
+   "kana": "まわり",
+   "en": [
+    "surroundings"
+   ]
+  },
+  {
+   "id": "歴史|れきし",
+   "kanji": "歴史",
+   "kana": "れきし",
+   "en": [
+    "history"
+   ]
+  },
+  {
+   "id": "不便|ふべん",
+   "kanji": "不便",
+   "kana": "ふべん",
+   "en": [
+    "inconvenience"
+   ]
+  },
+  {
+   "id": "血|ち",
+   "kanji": "血",
+   "kana": "ち",
+   "en": [
+    "blood"
+   ]
+  },
+  {
+   "id": "毛|け",
+   "kanji": "毛",
+   "kana": "け",
+   "en": [
+    "hair",
+    "fur"
+   ]
+  },
+  {
+   "id": "ひどい|ひどい",
+   "kana": "ひどい",
+   "en": [
+    "terrible",
+    "awful",
+    "unfair",
+    "cruel"
+   ]
+  },
+  {
+   "id": "例えば|たとえば",
+   "kanji": "例えば",
+   "kana": "たとえば",
+   "en": [
+    "for example",
+    "e.g"
+   ]
+  },
+  {
+   "id": "中々|なかなか",
+   "kanji": "中々",
+   "kana": "なかなか",
+   "en": [
+    "very",
+    "considerably",
+    "quite"
+   ]
+  },
+  {
+   "id": "随分|ずいぶん",
+   "kanji": "随分",
+   "kana": "ずいぶん",
+   "en": [
+    "extremely"
+   ]
+  },
+  {
+   "id": "押し入れ|おしいれ",
+   "kanji": "押し入れ",
+   "kana": "おしいれ",
+   "en": [
+    "closet"
+   ]
+  },
+  {
+   "id": "電灯|でんとう",
+   "kanji": "電灯",
+   "kana": "でんとう",
+   "en": [
+    "electric light"
+   ]
+  },
+  {
+   "id": "叱る|しかる",
+   "kanji": "叱る",
+   "kana": "しかる",
+   "en": [
+    "to scold"
+   ]
+  },
+  {
+   "id": "サンダル|サンダル",
+   "kana": "サンダル",
+   "en": [
+    "sandal"
+   ]
+  },
+  {
+   "id": "びっくりする|びっくりする",
+   "kana": "びっくりする",
+   "en": [
+    "to be surprised"
+   ]
+  },
+  {
+   "id": "うまい|うまい",
+   "kana": "うまい",
+   "en": [
+    "delicious",
+    "skillful",
+    "fortunate"
+   ]
+  },
+  {
+   "id": "変える|かえる",
+   "kanji": "変える",
+   "kana": "かえる",
+   "en": [
+    "to change",
+    "to alter",
+    "to vary"
+   ]
+  },
+  {
+   "id": "講堂|こうどう",
+   "kanji": "講堂",
+   "kana": "こうどう",
+   "en": [
+    "auditorium"
+   ]
+  },
+  {
+   "id": "子|こ",
+   "kanji": "子",
+   "kana": "こ",
+   "en": [
+    "child"
+   ]
+  },
+  {
+   "id": "沸かす|わかす",
+   "kanji": "沸かす",
+   "kana": "わかす",
+   "en": [
+    "to boil"
+   ]
+  },
+  {
+   "id": "レジ|レジ",
+   "kana": "レジ",
+   "en": [
+    "register"
+   ]
+  },
+  {
+   "id": "しばらく|しばらく",
+   "kana": "しばらく",
+   "en": [
+    "little while"
+   ]
+  },
+  {
+   "id": "特に|とくに",
+   "kanji": "特に",
+   "kana": "とくに",
+   "en": [
+    "particularly"
+   ]
+  },
+  {
+   "id": "空く|あく",
+   "kanji": "空く",
+   "kana": "あく",
+   "en": [
+    "to open",
+    "to become empty"
+   ]
+  },
+  {
+   "id": "計画|けいかくする",
+   "kanji": "計画",
+   "kana": "けいかくする",
+   "en": [
+    "plan",
+    "project",
+    "schedule"
+   ]
+  },
+  {
+   "id": "通り|とおり",
+   "kanji": "通り",
+   "kana": "とおり",
+   "en": [
+    "~ Street",
+    "Street",
+    "Avenue"
+   ]
+  },
+  {
+   "id": "下着|したぎ",
+   "kanji": "下着",
+   "kana": "したぎ",
+   "en": [
+    "underwear"
+   ]
+  },
+  {
+   "id": "経済|けいざい",
+   "kanji": "経済",
+   "kana": "けいざい",
+   "en": [
+    "economics",
+    "finance",
+    "economy"
+   ]
+  },
+  {
+   "id": "こう|こう",
+   "kana": "こう",
+   "en": [
+    "like this",
+    "this way"
+   ]
+  },
+  {
+   "id": "是非|ぜひ",
+   "kanji": "是非",
+   "kana": "ぜひ",
+   "en": [
+    "certainly",
+    "by all means",
+    "without fail"
+   ]
+  },
+  {
+   "id": "裏|うら",
+   "kanji": "裏",
+   "kana": "うら",
+   "en": [
+    "reverse side",
+    "back"
+   ]
+  },
+  {
+   "id": "為|ため",
+   "kanji": "為",
+   "kana": "ため",
+   "en": [
+    "good",
+    "advantage",
+    "in order to"
+   ]
+  },
+  {
+   "id": "おいでになる|おいでになる",
+   "kana": "おいでになる",
+   "en": [
+    "(hon.) to be",
+    "to be"
+   ]
+  },
+  {
+   "id": "変わる|かわる",
+   "kanji": "変わる",
+   "kana": "かわる",
+   "en": [
+    "to change (v.i.)",
+    "to change",
+    "to be transformed",
+    "to vary"
+   ]
+  },
+  {
+   "id": "以外|いがい",
+   "kanji": "以外",
+   "kana": "いがい",
+   "en": [
+    "other than",
+    "with the exception of",
+    "excepting"
+   ]
+  },
+  {
+   "id": "済む|すむ",
+   "kanji": "済む",
+   "kana": "すむ",
+   "en": [
+    "to finish",
+    "to end"
+   ]
+  },
+  {
+   "id": "ハンバーグ|ハンバーグ",
+   "kana": "ハンバーグ",
+   "en": [
+    "hamburger steak"
+   ]
+  },
+  {
+   "id": "市|し",
+   "kanji": "市",
+   "kana": "し",
+   "en": [
+    "city"
+   ]
+  },
+  {
+   "id": "引き出し|ひきだし",
+   "kanji": "引き出し",
+   "kana": "ひきだし",
+   "en": [
+    "drawer"
+   ]
+  },
+  {
+   "id": "遊び|あそび",
+   "kanji": "遊び",
+   "kana": "あそび",
+   "en": [
+    "play"
+   ]
+  },
+  {
+   "id": "支度|したくする",
+   "kanji": "支度",
+   "kana": "したくする",
+   "en": [
+    "preparation"
+   ]
+  },
+  {
+   "id": "見える|みえる",
+   "kanji": "見える",
+   "kana": "みえる",
+   "en": [
+    "to be visible",
+    "-- polite verb meaning 来る --"
+   ]
+  },
+  {
+   "id": "十分|じゅうぶん",
+   "kanji": "十分",
+   "kana": "じゅうぶん",
+   "en": [
+    "enough"
+   ]
+  },
+  {
+   "id": "音|おと",
+   "kanji": "音",
+   "kana": "おと",
+   "en": [
+    "sound",
+    "note"
+   ]
+  },
+  {
+   "id": "きっと|きっと",
+   "kana": "きっと",
+   "en": [
+    "surely",
+    "definitely",
+    "undoubtedly",
+    "certainly"
+   ]
+  },
+  {
+   "id": "まず|まず",
+   "kana": "まず",
+   "en": [
+    "first (of all)",
+    "first",
+    "to start with"
+   ]
+  },
+  {
+   "id": "遠く|とおく",
+   "kanji": "遠く",
+   "kana": "とおく",
+   "en": [
+    "far away",
+    "distant"
+   ]
+  },
+  {
+   "id": "大体|だいたい",
+   "kanji": "大体",
+   "kana": "だいたい",
+   "en": [
+    "approximately",
+    "in most cases",
+    "in general",
+    "to begin with"
+   ]
+  },
+  {
+   "id": "折れる|おれる",
+   "kanji": "折れる",
+   "kana": "おれる",
+   "en": [
+    "to break",
+    "to be folded",
+    "to give in",
+    "to turn"
+   ]
+  },
+  {
+   "id": "正しい|ただしい",
+   "kanji": "正しい",
+   "kana": "ただしい",
+   "en": [
+    "correct"
+   ]
+  },
+  {
+   "id": "輸入|ゆにゅう",
+   "kanji": "輸入",
+   "kana": "ゆにゅう",
+   "en": [
+    "import"
+   ]
+  },
+  {
+   "id": "返事|へんじ",
+   "kanji": "返事",
+   "kana": "へんじ",
+   "en": [
+    "reply",
+    "answer"
+   ]
+  },
+  {
+   "id": "都|と",
+   "kanji": "都",
+   "kana": "と",
+   "en": [
+    "metropolitan"
+   ]
+  },
+  {
+   "id": "産業|さんぎょう",
+   "kanji": "産業",
+   "kana": "さんぎょう",
+   "en": [
+    "industry"
+   ]
+  },
+  {
+   "id": "伝える|つたえる",
+   "kanji": "伝える",
+   "kana": "つたえる",
+   "en": [
+    "to convey (a message)",
+    "to convey",
+    "to tell",
+    "to report"
+   ]
+  },
+  {
+   "id": "お金持ち|かねもち",
+   "kanji": "お金持ち",
+   "kana": "かねもち",
+   "alt": [
+    "おかねもち"
+   ],
+   "en": [
+    "rich person"
+   ]
+  },
+  {
+   "id": "説明|せつめい",
+   "kanji": "説明",
+   "kana": "せつめい",
+   "en": [
+    "explanation"
+   ]
+  },
+  {
+   "id": "島|しま",
+   "kanji": "島",
+   "kana": "しま",
+   "en": [
+    "island"
+   ]
+  },
+  {
+   "id": "道具|どうぐ",
+   "kanji": "道具",
+   "kana": "どうぐ",
+   "en": [
+    "tool"
+   ]
+  },
+  {
+   "id": "滑る|すべる",
+   "kanji": "滑る",
+   "kana": "すべる",
+   "en": [
+    "to slide",
+    "to slip"
+   ]
+  },
+  {
+   "id": "それほど|それほど",
+   "kana": "それほど",
+   "en": [
+    "to that degree",
+    "extent"
+   ]
+  },
+  {
+   "id": "以上|いじょう",
+   "kanji": "以上",
+   "kana": "いじょう",
+   "en": [
+    "more than",
+    "this is all"
+   ]
+  },
+  {
+   "id": "特急|とっきゅう",
+   "kanji": "特急",
+   "kana": "とっきゅう",
+   "en": [
+    "limited express (train faster than an express)",
+    "limited express"
+   ]
+  },
+  {
+   "id": "プレゼント|プレゼント",
+   "kana": "プレゼント",
+   "en": [
+    "present",
+    "gift"
+   ]
+  },
+  {
+   "id": "妻|つま",
+   "kanji": "妻",
+   "kana": "つま",
+   "en": [
+    "wife (humble)",
+    "wife"
+   ]
+  },
+  {
+   "id": "帰り|かえり",
+   "kanji": "帰り",
+   "kana": "かえり",
+   "en": [
+    "return",
+    "coming back"
+   ]
+  },
+  {
+   "id": "具合|ぐあい",
+   "kanji": "具合",
+   "kana": "ぐあい",
+   "en": [
+    "condition",
+    "state",
+    "health"
+   ]
+  },
+  {
+   "id": "堅|かたい",
+   "kanji": "堅",
+   "kana": "かたい",
+   "alt": [
+    "硬",
+    "固い"
+   ],
+   "en": [
+    "solid",
+    "hard",
+    "firm"
+   ]
+  },
+  {
+   "id": "駐車場|ちゅうしゃじょう",
+   "kanji": "駐車場",
+   "kana": "ちゅうしゃじょう",
+   "en": [
+    "parking lot"
+   ]
+  },
+  {
+   "id": "スーツ|スーツ",
+   "kana": "スーツ",
+   "en": [
+    "suit"
+   ]
+  },
+  {
+   "id": "危険|きけん",
+   "kanji": "危険",
+   "kana": "きけん",
+   "en": [
+    "danger",
+    "risk",
+    "hazard"
+   ]
+  },
+  {
+   "id": "髪|かみ",
+   "kanji": "髪",
+   "kana": "かみ",
+   "en": [
+    "hair"
+   ]
+  },
+  {
+   "id": "天気予報|てんきよほう",
+   "kanji": "天気予報",
+   "kana": "てんきよほう",
+   "en": [
+    "weather forecast"
+   ]
+  },
+  {
+   "id": "彼女|かのじょ",
+   "kanji": "彼女",
+   "kana": "かのじょ",
+   "en": [
+    "girlfriend",
+    "she"
+   ]
+  },
+  {
+   "id": "間|あいだ",
+   "kanji": "間",
+   "kana": "あいだ",
+   "en": [
+    "space",
+    "interval"
+   ]
+  },
+  {
+   "id": "卒業|そつぎょう",
+   "kanji": "卒業",
+   "kana": "そつぎょう",
+   "en": [
+    "graduation"
+   ]
+  },
+  {
+   "id": "それで|それで",
+   "kana": "それで",
+   "en": [
+    "and (conj.)",
+    "and",
+    "thereupon",
+    "because of that"
+   ]
+  },
+  {
+   "id": "枝|えだ",
+   "kanji": "枝",
+   "kana": "えだ",
+   "en": [
+    "branch",
+    "twig"
+   ]
+  },
+  {
+   "id": "専門|せんもん",
+   "kanji": "専門",
+   "kana": "せんもん",
+   "en": [
+    "major",
+    "speciality"
+   ]
+  },
+  {
+   "id": "そろそろ|そろそろ",
+   "kana": "そろそろ",
+   "en": [
+    "gradually",
+    "soon"
+   ]
+  },
+  {
+   "id": "送る|おくる",
+   "kanji": "送る",
+   "kana": "おくる",
+   "en": [
+    "to send",
+    "to dispatch"
+   ]
+  },
+  {
+   "id": "あげる|あげる",
+   "kana": "あげる",
+   "en": [
+    "to give"
+   ]
+  },
+  {
+   "id": "騒ぐ|さわぐ",
+   "kanji": "騒ぐ",
+   "kana": "さわぐ",
+   "en": [
+    "to make noise",
+    "to clamor"
+   ]
+  },
+  {
+   "id": "尋ねる|たずねる",
+   "kanji": "尋ねる",
+   "kana": "たずねる",
+   "en": [
+    "to inquire (same as 質問する)",
+    "to inquire"
+   ]
+  },
+  {
+   "id": "放送|ほうそうする",
+   "kanji": "放送",
+   "kana": "ほうそうする",
+   "en": [
+    "broadcasting"
+   ]
+  },
+  {
+   "id": "政治|せいじ",
+   "kanji": "政治",
+   "kana": "せいじ",
+   "en": [
+    "politics"
+   ]
+  },
+  {
+   "id": "市民|しみん",
+   "kanji": "市民",
+   "kana": "しみん",
+   "en": [
+    "citizen"
+   ]
+  },
+  {
+   "id": "ファックス|ファックス",
+   "kana": "ファックス",
+   "en": [
+    "fax"
+   ]
+  },
+  {
+   "id": "負ける|まける",
+   "kanji": "負ける",
+   "kana": "まける",
+   "en": [
+    "to lose (a game) (v.i.)",
+    "to lose",
+    "to be defeated"
+   ]
+  },
+  {
+   "id": "指輪|ゆびわ",
+   "kanji": "指輪",
+   "kana": "ゆびわ",
+   "en": [
+    "(finger) ring",
+    "ring"
+   ]
+  },
+  {
+   "id": "田舎|いなか",
+   "kanji": "田舎",
+   "kana": "いなか",
+   "en": [
+    "rural",
+    "countryside"
+   ]
+  },
+  {
+   "id": "見つける|みつける",
+   "kanji": "見つける",
+   "kana": "みつける",
+   "en": [
+    "to discover",
+    "to find"
+   ]
+  },
+  {
+   "id": "高校生|こうこうせい",
+   "kanji": "高校生",
+   "kana": "こうこうせい",
+   "en": [
+    "high school student"
+   ]
+  },
+  {
+   "id": "講義|こうぎ",
+   "kanji": "講義",
+   "kana": "こうぎ",
+   "en": [
+    "a lecture"
+   ]
+  },
+  {
+   "id": "そんなに|そんなに",
+   "kana": "そんなに",
+   "en": [
+    "so much",
+    "like that"
+   ]
+  },
+  {
+   "id": "昼休み|ひるやすみ",
+   "kanji": "昼休み",
+   "kana": "ひるやすみ",
+   "en": [
+    "lunch break",
+    "noon recess"
+   ]
+  },
+  {
+   "id": "忘れ物|わすれもの",
+   "kanji": "忘れ物",
+   "kana": "わすれもの",
+   "en": [
+    "lost article",
+    "something forgotten"
+   ]
+  },
+  {
+   "id": "下りる|おりる",
+   "kanji": "下りる",
+   "kana": "おりる",
+   "en": [
+    "to get down",
+    "to go",
+    "come down"
+   ]
+  },
+  {
+   "id": "腕|うで",
+   "kanji": "腕",
+   "kana": "うで",
+   "en": [
+    "arm (in reference to body)",
+    "arm"
+   ]
+  },
+  {
+   "id": "訳|わけ",
+   "kanji": "訳",
+   "kana": "わけ",
+   "en": [
+    "reason",
+    "explanation"
+   ]
+  },
+  {
+   "id": "承知|しょうちする",
+   "kanji": "承知",
+   "kana": "しょうちする",
+   "en": [
+    "consent",
+    "acceptance"
+   ]
+  },
+  {
+   "id": "日記|にっき",
+   "kanji": "日記",
+   "kana": "にっき",
+   "en": [
+    "diary",
+    "journal"
+   ]
+  },
+  {
+   "id": "高校|こうこう",
+   "kanji": "高校",
+   "kana": "こうこう",
+   "alt": [
+    "高等学校",
+    "こうとうがっこう"
+   ],
+   "en": [
+    "high school",
+    "senior high school"
+   ]
+  },
+  {
+   "id": "似る|にる",
+   "kanji": "似る",
+   "kana": "にる",
+   "en": [
+    "to resemble",
+    "to be similar"
+   ]
+  },
+  {
+   "id": "暖房|だんぼう",
+   "kanji": "暖房",
+   "kana": "だんぼう",
+   "en": [
+    "heating"
+   ]
+  },
+  {
+   "id": "留守|るす",
+   "kanji": "留守",
+   "kana": "るす",
+   "en": [
+    "absence",
+    "not at home"
+   ]
+  },
+  {
+   "id": "割合|わりあい",
+   "kanji": "割合",
+   "kana": "わりあい",
+   "en": [
+    "rate",
+    "ratio",
+    "percentage"
+   ]
+  },
+  {
+   "id": "寺|てら",
+   "kanji": "寺",
+   "kana": "てら",
+   "en": [
+    "Buddhist temple"
+   ]
+  },
+  {
+   "id": "慣れる|なれる",
+   "kanji": "慣れる",
+   "kana": "なれる",
+   "en": [
+    "to grow accustomed to"
+   ]
+  },
+  {
+   "id": "普通|ふつう",
+   "kanji": "普通",
+   "kana": "ふつう",
+   "en": [
+    "common",
+    "usual"
+   ]
+  },
+  {
+   "id": "手伝う|てつだう",
+   "kanji": "手伝う",
+   "kana": "てつだう",
+   "en": [
+    "to help"
+   ]
+  },
+  {
+   "id": "なるほど|なるほど",
+   "kana": "なるほど",
+   "en": [
+    "I see",
+    "I now understand"
+   ]
+  },
+  {
+   "id": "くださる|くださる",
+   "kana": "くださる",
+   "en": [
+    "(hon.) to give",
+    "to give",
+    "to confer"
+   ]
+  },
+  {
+   "id": "息子|むすこ",
+   "kanji": "息子",
+   "kana": "むすこ",
+   "en": [
+    "(humble) son",
+    "son"
+   ]
+  },
+  {
+   "id": "お子さん|おこさん",
+   "kanji": "お子さん",
+   "kana": "おこさん",
+   "en": [
+    "(someone else's) child (polite)",
+    "child"
+   ]
+  },
+  {
+   "id": "会場|かいじょう",
+   "kanji": "会場",
+   "kana": "かいじょう",
+   "en": [
+    "venue",
+    "meeting place"
+   ]
+  },
+  {
+   "id": "笑う|わらう",
+   "kanji": "笑う",
+   "kana": "わらう",
+   "en": [
+    "to laugh",
+    "to smile"
+   ]
+  },
+  {
+   "id": "運ぶ|はこぶ",
+   "kanji": "運ぶ",
+   "kana": "はこぶ",
+   "en": [
+    "to transport",
+    "to carry"
+   ]
+  },
+  {
+   "id": "文学|ぶんがく",
+   "kanji": "文学",
+   "kana": "ぶんがく",
+   "en": [
+    "literature"
+   ]
+  },
+  {
+   "id": "光|ひかり",
+   "kanji": "光",
+   "kana": "ひかり",
+   "en": [
+    "light"
+   ]
+  },
+  {
+   "id": "お見舞い|おみまい",
+   "kanji": "お見舞い",
+   "kana": "おみまい",
+   "en": [
+    "calling on someone who is ill",
+    "visit"
+   ]
+  },
+  {
+   "id": "席|せき",
+   "kanji": "席",
+   "kana": "せき",
+   "en": [
+    "a seat"
+   ]
+  },
+  {
+   "id": "ご存じ|ごぞんじ",
+   "kanji": "ご存じ",
+   "kana": "ごぞんじ",
+   "en": [
+    "knowing",
+    "acquaintance"
+   ]
+  },
+  {
+   "id": "下る|さがる",
+   "kanji": "下る",
+   "kana": "さがる",
+   "en": [
+    "to descend",
+    "to drop",
+    "to fall"
+   ]
+  },
+  {
+   "id": "字|じ",
+   "kanji": "字",
+   "kana": "じ",
+   "en": [
+    "letter",
+    "character"
+   ]
+  },
+  {
+   "id": "アジア|アジア",
+   "kana": "アジア",
+   "en": [
+    "Asia"
+   ]
+  },
+  {
+   "id": "褒める|ほめる",
+   "kanji": "褒める",
+   "kana": "ほめる",
+   "en": [
+    "to praise",
+    "to say nice things"
+   ]
+  },
+  {
+   "id": "空く|すく",
+   "kanji": "空く",
+   "kana": "すく",
+   "en": [
+    "to be empty (in reference to people)",
+    "to be empty",
+    "to be less crowded"
+   ]
+  },
+  {
+   "id": "あ|あ",
+   "kana": "あ",
+   "en": [
+    "Ah"
+   ]
+  },
+  {
+   "id": "最も|もっとも",
+   "kanji": "最も",
+   "kana": "もっとも",
+   "en": [
+    "most"
+   ]
+  },
+  {
+   "id": "合う|あう",
+   "kanji": "合う",
+   "kana": "あう",
+   "en": [
+    "to fit",
+    "to match"
+   ]
+  },
+  {
+   "id": "最後|さいご",
+   "kanji": "最後",
+   "kana": "さいご",
+   "en": [
+    "last",
+    "end"
+   ]
+  },
+  {
+   "id": "値段|ねだん",
+   "kanji": "値段",
+   "kana": "ねだん",
+   "en": [
+    "price"
+   ]
+  },
+  {
+   "id": "退院|たいいんする",
+   "kanji": "退院",
+   "kana": "たいいんする",
+   "en": [
+    "leaving hospital"
+   ]
+  },
+  {
+   "id": "展覧会|てんらんかい",
+   "kanji": "展覧会",
+   "kana": "てんらんかい",
+   "en": [
+    "exhibition"
+   ]
+  },
+  {
+   "id": "久しぶり|ひさしぶり",
+   "kanji": "久しぶり",
+   "kana": "ひさしぶり",
+   "en": [
+    "it has been a long time",
+    "for the first time in a long time"
+   ]
+  },
+  {
+   "id": "カーテン|カーテン",
+   "kana": "カーテン",
+   "en": [
+    "curtain"
+   ]
+  },
+  {
+   "id": "汽車|きしゃ",
+   "kanji": "汽車",
+   "kana": "きしゃ",
+   "en": [
+    "train (steam)",
+    "train"
+   ]
+  },
+  {
+   "id": "遅れる|おくれる",
+   "kanji": "遅れる",
+   "kana": "おくれる",
+   "en": [
+    "to (be) become late",
+    "to become late"
+   ]
+  },
+  {
+   "id": "見つかる|みつかる",
+   "kanji": "見つかる",
+   "kana": "みつかる",
+   "en": [
+    "to be found (v.i.)",
+    "to be found",
+    "to be discovered"
+   ]
+  },
+  {
+   "id": "召し上がる|めしあがる",
+   "kanji": "召し上がる",
+   "kana": "めしあがる",
+   "en": [
+    "-- honorific form of 食べる (たべる) and 飲む (のむ) --",
+    "-- honorific form of 食べる and 飲む --"
+   ]
+  },
+  {
+   "id": "太る|ふとる",
+   "kanji": "太る",
+   "kana": "ふとる",
+   "en": [
+    "to gain weight"
+   ]
+  },
+  {
+   "id": "注射|ちゅうしゃ",
+   "kanji": "注射",
+   "kana": "ちゅうしゃ",
+   "en": [
+    "injection"
+   ]
+  },
+  {
+   "id": "様|よう",
+   "kanji": "様",
+   "kana": "よう",
+   "en": [
+    "way",
+    "manner",
+    "kind"
+   ]
+  },
+  {
+   "id": "最初|さいしょ",
+   "kanji": "最初",
+   "kana": "さいしょ",
+   "en": [
+    "beginning",
+    "first"
+   ]
+  },
+  {
+   "id": "安心|あんしん",
+   "kanji": "安心",
+   "kana": "あんしん",
+   "en": [
+    "peace of mind",
+    "relief"
+   ]
+  },
+  {
+   "id": "直る|なおる",
+   "kanji": "直る",
+   "kana": "なおる",
+   "en": [
+    "to be fixed"
+   ]
+  },
+  {
+   "id": "集める|あつめる",
+   "kanji": "集める",
+   "kana": "あつめる",
+   "en": [
+    "to collect",
+    "to gather",
+    "to assemble"
+   ]
+  },
+  {
+   "id": "直す|なおす",
+   "kanji": "直す",
+   "kana": "なおす",
+   "en": [
+    "to correct (v.t.)",
+    "to correct",
+    "to fix"
+   ]
+  },
+  {
+   "id": "続く|つづく",
+   "kanji": "続く",
+   "kana": "つづく",
+   "en": [
+    "to be continued"
+   ]
+  },
+  {
+   "id": "先輩|せんぱい",
+   "kanji": "先輩",
+   "kana": "せんぱい",
+   "en": [
+    "senior members of a group"
+   ]
+  },
+  {
+   "id": "約束|やくそく",
+   "kanji": "約束",
+   "kana": "やくそく",
+   "en": [
+    "arrangement",
+    "appointment",
+    "promise"
+   ]
+  },
+  {
+   "id": "世話|せわする",
+   "kanji": "世話",
+   "kana": "せわする",
+   "en": [
+    "looking after",
+    "to look after"
+   ]
+  },
+  {
+   "id": "近所|きんじょ",
+   "kanji": "近所",
+   "kana": "きんじょ",
+   "en": [
+    "neighborhood"
+   ]
+  },
+  {
+   "id": "将来|しょうらい",
+   "kanji": "将来",
+   "kana": "しょうらい",
+   "en": [
+    "(in the) future",
+    "future",
+    "prospects"
+   ]
+  },
+  {
+   "id": "億|おく",
+   "kanji": "億",
+   "kana": "おく",
+   "en": [
+    "hundred million"
+   ]
+  },
+  {
+   "id": "数学|すうがく",
+   "kanji": "数学",
+   "kana": "すうがく",
+   "en": [
+    "mathematics"
+   ]
+  },
+  {
+   "id": "文化|ぶんか",
+   "kanji": "文化",
+   "kana": "ぶんか",
+   "en": [
+    "culture"
+   ]
+  },
+  {
+   "id": "払う|はらう",
+   "kanji": "払う",
+   "kana": "はらう",
+   "en": [
+    "to pay"
+   ]
+  },
+  {
+   "id": "習慣|しゅうかん",
+   "kanji": "習慣",
+   "kana": "しゅうかん",
+   "en": [
+    "custom (in reference to culture)",
+    "custom"
+   ]
+  },
+  {
+   "id": "焼ける|やける",
+   "kanji": "焼ける",
+   "kana": "やける",
+   "en": [
+    "to burn",
+    "to be roasted"
+   ]
+  },
+  {
+   "id": "君|きみ",
+   "kanji": "君",
+   "kana": "きみ",
+   "en": [
+    "you (informal for men)",
+    "you"
+   ]
+  },
+  {
+   "id": "冷える|ひえる",
+   "kanji": "冷える",
+   "kana": "ひえる",
+   "en": [
+    "to grow cold",
+    "to cool down"
+   ]
+  },
+  {
+   "id": "点く|つく",
+   "kanji": "点く",
+   "kana": "つく",
+   "en": [
+    "to be started",
+    "to be switched on"
+   ]
+  },
+  {
+   "id": "この間|このあいだ",
+   "kanji": "この間",
+   "kana": "このあいだ",
+   "en": [
+    "the other day",
+    "recently"
+   ]
+  },
+  {
+   "id": "格好|かっこう",
+   "kanji": "格好",
+   "kana": "かっこう",
+   "en": [
+    "appearance",
+    "manner",
+    "shape",
+    "form",
+    "posture"
+   ]
+  },
+  {
+   "id": "続ける|つづける",
+   "kanji": "続ける",
+   "kana": "つづける",
+   "en": [
+    "to continue",
+    "to keep up"
+   ]
+  },
+  {
+   "id": "落す|おとす",
+   "kanji": "落す",
+   "kana": "おとす",
+   "en": [
+    "to drop",
+    "to lose"
+   ]
+  },
+  {
+   "id": "明日|あす",
+   "kanji": "明日",
+   "kana": "あす",
+   "en": [
+    "tomorrow"
+   ]
+  },
+  {
+   "id": "出発|しゅっぱつする",
+   "kanji": "出発",
+   "kana": "しゅっぱつする",
+   "en": [
+    "departure"
+   ]
+  },
+  {
+   "id": "拝見|はいけんする",
+   "kanji": "拝見",
+   "kana": "はいけんする",
+   "en": [
+    "(humble) (polite) seeing",
+    "seeing",
+    "look at"
+   ]
+  },
+  {
+   "id": "割れる|われる",
+   "kanji": "割れる",
+   "kana": "われる",
+   "en": [
+    "to break"
+   ]
+  },
+  {
+   "id": "背中|せなか",
+   "kanji": "背中",
+   "kana": "せなか",
+   "en": [
+    "back (of body)",
+    "back"
+   ]
+  },
+  {
+   "id": "新聞社|しんぶんしゃ",
+   "kanji": "新聞社",
+   "kana": "しんぶんしゃ",
+   "en": [
+    "newspaper company"
+   ]
+  },
+  {
+   "id": "いじめる|いじめる",
+   "kana": "いじめる",
+   "en": [
+    "to bully",
+    "to torment"
+   ]
+  },
+  {
+   "id": "おっしゃる|おっしゃる",
+   "kana": "おっしゃる",
+   "en": [
+    "-- honorific expression for いう --"
+   ]
+  },
+  {
+   "id": "眠い|ねむい",
+   "kanji": "眠い",
+   "kana": "ねむい",
+   "en": [
+    "sleepy",
+    "drowsy"
+   ]
+  },
+  {
+   "id": "濡れる|ぬれる",
+   "kanji": "濡れる",
+   "kana": "ぬれる",
+   "en": [
+    "to get wet"
+   ]
+  },
+  {
+   "id": "倒れる|たおれる",
+   "kanji": "倒れる",
+   "kana": "たおれる",
+   "en": [
+    "to collapse",
+    "to break down"
+   ]
+  },
+  {
+   "id": "スーパー|スーパー",
+   "kana": "スーパー",
+   "alt": [
+    "スーパーマーケット"
+   ],
+   "en": [
+    "supermarket"
+   ]
+  },
+  {
+   "id": "アクセサリー|アクセサリー",
+   "kana": "アクセサリー",
+   "en": [
+    "accessory"
+   ]
+  },
+  {
+   "id": "考える|かんがえる",
+   "kanji": "考える",
+   "kana": "かんがえる",
+   "en": [
+    "to think (about)",
+    "to think",
+    "to consider"
+   ]
+  },
+  {
+   "id": "向かう|むかう",
+   "kanji": "向かう",
+   "kana": "むかう",
+   "en": [
+    "to face",
+    "to go towards"
+   ]
+  },
+  {
+   "id": "自由|じゆう",
+   "kanji": "自由",
+   "kana": "じゆう",
+   "en": [
+    "freedom"
+   ]
+  },
+  {
+   "id": "仕方|しかた",
+   "kanji": "仕方",
+   "kana": "しかた",
+   "en": [
+    "way (of doing something)",
+    "way"
+   ]
+  },
+  {
+   "id": "首|くび",
+   "kanji": "首",
+   "kana": "くび",
+   "en": [
+    "neck"
+   ]
+  },
+  {
+   "id": "程|ほど",
+   "kanji": "程",
+   "kana": "ほど",
+   "en": [
+    "degree",
+    "extent"
+   ]
+  },
+  {
+   "id": "代わり|かわり",
+   "kanji": "代わり",
+   "kana": "かわり",
+   "en": [
+    "substitute",
+    "replacement"
+   ]
+  },
+  {
+   "id": "失敗|しっぱい",
+   "kanji": "失敗",
+   "kana": "しっぱい",
+   "en": [
+    "failure",
+    "mistake"
+   ]
+  },
+  {
+   "id": "工業|こうぎょう",
+   "kanji": "工業",
+   "kana": "こうぎょう",
+   "en": [
+    "(manufacturing) industry",
+    "industry"
+   ]
+  },
+  {
+   "id": "移る|うつる",
+   "kanji": "移る",
+   "kana": "うつる",
+   "en": [
+    "to move (from a house)",
+    "to move",
+    "to transfer",
+    "to shift"
+   ]
+  },
+  {
+   "id": "スーツケース|スーツケース",
+   "kana": "スーツケース",
+   "en": [
+    "suitcase"
+   ]
+  },
+  {
+   "id": "ひげ|ひげ",
+   "kana": "ひげ",
+   "en": [
+    "beard"
+   ]
+  },
+  {
+   "id": "研究室|けんきゅうしつ",
+   "kanji": "研究室",
+   "kana": "けんきゅうしつ",
+   "en": [
+    "the professor's office",
+    "laboratory"
+   ]
+  },
+  {
+   "id": "工場|こうじょう",
+   "kanji": "工場",
+   "kana": "こうじょう",
+   "en": [
+    "factory"
+   ]
+  },
+  {
+   "id": "紹介|しょうかい",
+   "kanji": "紹介",
+   "kana": "しょうかい",
+   "en": [
+    "an introduction"
+   ]
+  },
+  {
+   "id": "けれど|けれど",
+   "kana": "けれど",
+   "alt": [
+    "けれども"
+   ],
+   "en": [
+    "but",
+    "although"
+   ]
+  },
+  {
+   "id": "舟|ふね",
+   "kanji": "舟",
+   "kana": "ふね",
+   "en": [
+    "ship",
+    "boat"
+   ]
+  },
+  {
+   "id": "動く|うごく",
+   "kanji": "動く",
+   "kana": "うごく",
+   "en": [
+    "to move"
+   ]
+  },
+  {
+   "id": "コンサート|コンサート",
+   "kana": "コンサート",
+   "en": [
+    "concert"
+   ]
+  },
+  {
+   "id": "虫|むし",
+   "kanji": "虫",
+   "kana": "むし",
+   "en": [
+    "insect"
+   ]
+  },
+  {
+   "id": "優しい|やさしい",
+   "kanji": "優しい",
+   "kana": "やさしい",
+   "en": [
+    "kind (person)",
+    "kind",
+    "gentle",
+    "easy"
+   ]
+  },
+  {
+   "id": "コンピュータ|コンピュータ",
+   "kana": "コンピュータ",
+   "alt": [
+    "コンピューター"
+   ],
+   "en": [
+    "computer"
+   ]
+  },
+  {
+   "id": "植える|うえる",
+   "kanji": "植える",
+   "kana": "うえる",
+   "en": [
+    "to plant"
+   ]
+  },
+  {
+   "id": "両方|りょうほう",
+   "kanji": "両方",
+   "kana": "りょうほう",
+   "en": [
+    "both sides",
+    "both parties"
+   ]
+  },
+  {
+   "id": "汚れる|よごれる",
+   "kanji": "汚れる",
+   "kana": "よごれる",
+   "en": [
+    "to become dirty"
+   ]
+  },
+  {
+   "id": "水泳|すいえい",
+   "kanji": "水泳",
+   "kana": "すいえい",
+   "en": [
+    "swimming"
+   ]
+  },
+  {
+   "id": "経験|けいけんする",
+   "kanji": "経験",
+   "kana": "けいけんする",
+   "en": [
+    "experience"
+   ]
+  },
+  {
+   "id": "勝つ|かつ",
+   "kanji": "勝つ",
+   "kana": "かつ",
+   "en": [
+    "to win"
+   ]
+  },
+  {
+   "id": "砂|すな",
+   "kanji": "砂",
+   "kana": "すな",
+   "en": [
+    "sand"
+   ]
+  },
+  {
+   "id": "警察|けいさつ",
+   "kanji": "警察",
+   "kana": "けいさつ",
+   "en": [
+    "police",
+    "police station"
+   ]
+  },
+  {
+   "id": "取り替える|とりかえる",
+   "kanji": "取り替える",
+   "kana": "とりかえる",
+   "en": [
+    "to exchange",
+    "to replace"
+   ]
+  },
+  {
+   "id": "急ぐ|いそぐ",
+   "kanji": "急ぐ",
+   "kana": "いそぐ",
+   "en": [
+    "to hurry",
+    "to be in a hurry",
+    "to rush"
+   ]
+  },
+  {
+   "id": "簡単|かんたん",
+   "kanji": "簡単",
+   "kana": "かんたん",
+   "en": [
+    "simple"
+   ]
+  },
+  {
+   "id": "参る|まいる",
+   "kanji": "参る",
+   "kana": "まいる",
+   "en": [
+    "humble expression for 行く and 来る"
+   ]
+  },
+  {
+   "id": "全然|ぜんぜん",
+   "kanji": "全然",
+   "kana": "ぜんぜん",
+   "en": [
+    "not at all",
+    "wholly",
+    "entirely"
+   ]
+  },
+  {
+   "id": "特別|とくべつ",
+   "kanji": "特別",
+   "kana": "とくべつ",
+   "en": [
+    "special"
+   ]
+  },
+  {
+   "id": "復習|ふくしゅう",
+   "kanji": "復習",
+   "kana": "ふくしゅう",
+   "en": [
+    "review (of lessons)",
+    "review",
+    "revision"
+   ]
+  },
+  {
+   "id": "間に合う|まにあう",
+   "kanji": "間に合う",
+   "kana": "まにあう",
+   "en": [
+    "to be in time for"
+   ]
+  },
+  {
+   "id": "役に立つ|やくにたつ",
+   "kanji": "役に立つ",
+   "kana": "やくにたつ",
+   "en": [
+    "to be helpful",
+    "to be useful"
+   ]
+  },
+  {
+   "id": "もうすぐ|もうすぐ",
+   "kana": "もうすぐ",
+   "en": [
+    "very soon",
+    "in a few moments",
+    "days"
+   ]
+  },
+  {
+   "id": "真中|まんなか",
+   "kanji": "真中",
+   "kana": "まんなか",
+   "en": [
+    "middle",
+    "center"
+   ]
+  },
+  {
+   "id": "戻る|もどる",
+   "kanji": "戻る",
+   "kana": "もどる",
+   "en": [
+    "to return (v.i.)",
+    "to return",
+    "to come back"
+   ]
+  },
+  {
+   "id": "研究|けんきゅう",
+   "kanji": "研究",
+   "kana": "けんきゅう",
+   "en": [
+    "study",
+    "research",
+    "investigation"
+   ]
+  },
+  {
+   "id": "ケーキ|ケーキ",
+   "kana": "ケーキ",
+   "en": [
+    "cake"
+   ]
+  },
+  {
+   "id": "草|くさ",
+   "kanji": "草",
+   "kana": "くさ",
+   "en": [
+    "grass"
+   ]
+  },
+  {
+   "id": "込む|こむ",
+   "kanji": "込む",
+   "kana": "こむ",
+   "en": [
+    "to be crowded"
+   ]
+  },
+  {
+   "id": "この頃|このごろ",
+   "kanji": "この頃",
+   "kana": "このごろ",
+   "en": [
+    "these days",
+    "nowadays"
+   ]
+  },
+  {
+   "id": "訪ねる|たずねる",
+   "kanji": "訪ねる",
+   "kana": "たずねる",
+   "en": [
+    "to visit"
+   ]
+  },
+  {
+   "id": "下げる|さげる",
+   "kanji": "下げる",
+   "kana": "さげる",
+   "en": [
+    "to lower (v.t.)",
+    "to lower",
+    "to hang"
+   ]
+  },
+  {
+   "id": "花見|はなみ",
+   "kanji": "花見",
+   "kana": "はなみ",
+   "en": [
+    "cherry-blossom viewing"
+   ]
+  },
+  {
+   "id": "途中|とちゅう",
+   "kanji": "途中",
+   "kana": "とちゅう",
+   "en": [
+    "on the way",
+    "midway"
+   ]
+  },
+  {
+   "id": "入院|にゅういんする",
+   "kanji": "入院",
+   "kana": "にゅういんする",
+   "en": [
+    "hospitalization"
+   ]
+  },
+  {
+   "id": "乗り換える|のりかえる",
+   "kanji": "乗り換える",
+   "kana": "のりかえる",
+   "en": [
+    "to transfer (trains)",
+    "to transfer",
+    "to change"
+   ]
+  },
+  {
+   "id": "別れる|わかれる",
+   "kanji": "別れる",
+   "kana": "わかれる",
+   "en": [
+    "to part from",
+    "to separate"
+   ]
+  },
+  {
+   "id": "安全|あんぜん",
+   "kanji": "安全",
+   "kana": "あんぜん",
+   "en": [
+    "safety",
+    "security"
+   ]
+  },
+  {
+   "id": "看護婦|かんごふ",
+   "kanji": "看護婦",
+   "kana": "かんごふ",
+   "en": [
+    "(female) nurse",
+    "nurse"
+   ]
+  },
+  {
+   "id": "見物|けんぶつ",
+   "kanji": "見物",
+   "kana": "けんぶつ",
+   "en": [
+    "sightseeing"
+   ]
+  },
+  {
+   "id": "相談|そうだんする",
+   "kanji": "相談",
+   "kana": "そうだんする",
+   "en": [
+    "consultation"
+   ]
+  },
+  {
+   "id": "ガソリンスタンド|ガソリンスタンド",
+   "kana": "ガソリンスタンド",
+   "en": [
+    "gas station",
+    "service station"
+   ]
+  },
+  {
+   "id": "テニス|テニス",
+   "kana": "テニス",
+   "en": [
+    "tennis"
+   ]
+  },
+  {
+   "id": "眠る|ねむる",
+   "kanji": "眠る",
+   "kana": "ねむる",
+   "en": [
+    "to sleep"
+   ]
+  },
+  {
+   "id": "上がる|あがる",
+   "kanji": "上がる",
+   "kana": "あがる",
+   "en": [
+    "to rise",
+    "to go up"
+   ]
+  },
+  {
+   "id": "翻訳|ほんやく",
+   "kanji": "翻訳",
+   "kana": "ほんやく",
+   "en": [
+    "translation"
+   ]
+  },
+  {
+   "id": "食事|しょくじする",
+   "kanji": "食事",
+   "kana": "しょくじする",
+   "en": [
+    "meal"
+   ]
+  },
+  {
+   "id": "お陰|おかげ",
+   "kanji": "お陰",
+   "kana": "おかげ",
+   "en": [
+    "thanks or owing to"
+   ]
+  },
+  {
+   "id": "娘|むすめ",
+   "kanji": "娘",
+   "kana": "むすめ",
+   "en": [
+    "daughter (humble)",
+    "daughter"
+   ]
+  },
+  {
+   "id": "湯|ゆ",
+   "kanji": "湯",
+   "kana": "ゆ",
+   "en": [
+    "hot water"
+   ]
+  },
+  {
+   "id": "競争|きょうそう",
+   "kanji": "競争",
+   "kana": "きょうそう",
+   "en": [
+    "competition",
+    "contest"
+   ]
+  },
+  {
+   "id": "会議|かいぎ",
+   "kanji": "会議",
+   "kana": "かいぎ",
+   "en": [
+    "business meeting",
+    "conference"
+   ]
+  },
+  {
+   "id": "湖|みずうみ",
+   "kanji": "湖",
+   "kana": "みずうみ",
+   "en": [
+    "lake"
+   ]
+  },
+  {
+   "id": "集まる|あつまる",
+   "kanji": "集まる",
+   "kana": "あつまる",
+   "en": [
+    "to gather (v.i.)",
+    "to gather",
+    "to collect"
+   ]
+  },
+  {
+   "id": "生活|せいかつする",
+   "kanji": "生活",
+   "kana": "せいかつする",
+   "en": [
+    "living",
+    "life",
+    "to live"
+   ]
+  },
+  {
+   "id": "糸|いと",
+   "kanji": "糸",
+   "kana": "いと",
+   "en": [
+    "thread"
+   ]
+  },
+  {
+   "id": "関係|かんけい",
+   "kanji": "関係",
+   "kana": "かんけい",
+   "en": [
+    "relation(ship)",
+    "relation",
+    "connection"
+   ]
+  },
+  {
+   "id": "ピアノ|ピアノ",
+   "kana": "ピアノ",
+   "en": [
+    "piano"
+   ]
+  },
+  {
+   "id": "番組|ばんぐみ",
+   "kanji": "番組",
+   "kana": "ばんぐみ",
+   "en": [
+    "broadcast program"
+   ]
+  },
+  {
+   "id": "急|きゅう",
+   "kanji": "急",
+   "kana": "きゅう",
+   "en": [
+    "urgent",
+    "sudden",
+    "steep"
+   ]
+  },
+  {
+   "id": "棚|たな",
+   "kanji": "棚",
+   "kana": "たな",
+   "en": [
+    "shelves",
+    "rack"
+   ]
+  },
+  {
+   "id": "木綿|もめん",
+   "kanji": "木綿",
+   "kana": "もめん",
+   "en": [
+    "cotton"
+   ]
+  },
+  {
+   "id": "輸出|ゆしゅつする",
+   "kanji": "輸出",
+   "kana": "ゆしゅつする",
+   "en": [
+    "export"
+   ]
+  },
+  {
+   "id": "タイプ|タイプ",
+   "kana": "タイプ",
+   "en": [
+    "type",
+    "style"
+   ]
+  },
+  {
+   "id": "すり|すり",
+   "kana": "すり",
+   "en": [
+    "pickpocket"
+   ]
+  },
+  {
+   "id": "嬉しい|うれしい",
+   "kanji": "嬉しい",
+   "kana": "うれしい",
+   "en": [
+    "to be happy",
+    "to be glad"
+   ]
+  },
+  {
+   "id": "アルコール|アルコール",
+   "kana": "アルコール",
+   "en": [
+    "alcohol"
+   ]
+  },
+  {
+   "id": "ソフト|ソフト",
+   "kana": "ソフト",
+   "en": [
+    "soft",
+    "soft hat",
+    "software"
+   ]
+  },
+  {
+   "id": "神社|じんじゃ",
+   "kanji": "神社",
+   "kana": "じんじゃ",
+   "en": [
+    "Shinto shrine"
+   ]
+  },
+  {
+   "id": "大分|だいぶ",
+   "kanji": "大分",
+   "kana": "だいぶ",
+   "en": [
+    "fairly well",
+    "to a large extent",
+    "considerably",
+    "pretty much"
+   ]
+  },
+  {
+   "id": "楽しみ|たのしみ",
+   "kanji": "楽しみ",
+   "kana": "たのしみ",
+   "en": [
+    "pleasure",
+    "joy"
+   ]
+  },
+  {
+   "id": "趣味|しゅみ",
+   "kanji": "趣味",
+   "kana": "しゅみ",
+   "en": [
+    "hobby",
+    "pastime"
+   ]
+  },
+  {
+   "id": "電報|でんぽう",
+   "kanji": "電報",
+   "kana": "でんぽう",
+   "en": [
+    "telegram"
+   ]
+  },
+  {
+   "id": "家内|かない",
+   "kanji": "家内",
+   "kana": "かない",
+   "en": [
+    "(one's own) wife",
+    "wife"
+   ]
+  },
+  {
+   "id": "指|ゆび",
+   "kanji": "指",
+   "kana": "ゆび",
+   "en": [
+    "finger"
+   ]
+  },
+  {
+   "id": "これから|これから",
+   "kana": "これから",
+   "en": [
+    "from now on",
+    "after this"
+   ]
+  },
+  {
+   "id": "たまに|たまに",
+   "kana": "たまに",
+   "en": [
+    "occasionally"
+   ]
+  },
+  {
+   "id": "社会|しゃかい",
+   "kanji": "社会",
+   "kana": "しゃかい",
+   "en": [
+    "society"
+   ]
+  }
+ ]
+}

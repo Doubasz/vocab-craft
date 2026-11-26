@@ -7,6 +7,7 @@ import com.ferhat.vocabcraft.command.VocabCraftCommand;
 import com.ferhat.vocabcraft.config.VocabCraftConfig;
 import com.ferhat.vocabcraft.net.VocabCraftNetworking;
 import com.ferhat.vocabcraft.vocab.ItemDictionary;
+import com.ferhat.vocabcraft.vocab.VocabRepository;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
@@ -18,17 +19,24 @@ import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.file.Path;
+
 public class VocabCraftMod implements ModInitializer {
 	public static final String MOD_ID = "vocabcraft";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
 	public void onInitialize() {
-		VocabCraftConfig config = VocabCraftConfig.load(
-				FabricLoader.getInstance().getConfigDir().resolve(MOD_ID).resolve("config.json"));
+		Path configDir = FabricLoader.getInstance().getConfigDir().resolve(MOD_ID);
+		VocabCraftConfig config = VocabCraftConfig.load(configDir.resolve("config.json"));
 		ItemDictionary itemDictionary = ItemDictionary.loadCurated();
+		VocabRepository vocab = VocabRepository.load(configDir.resolve("decks"));
+		vocab.errors().forEach(error -> LOGGER.error("Deck not loaded: {}", error));
+		config.enabledDecks.stream()
+				.filter(id -> vocab.deck(id).isEmpty())
+				.forEach(id -> LOGGER.warn("Unknown deck in config: {}", id));
 		ChallengeManager challengeManager = new ChallengeManager(
-				config, new ChallengeScheduler(config), new ItemChallengeFactory(itemDictionary));
+				config, new ChallengeScheduler(config), new ItemChallengeFactory(itemDictionary), vocab);
 
 		VocabCraftNetworking.registerPayloads();
 		warnUnknownItems(itemDictionary);
@@ -45,9 +53,10 @@ public class VocabCraftMod implements ModInitializer {
 				!challengeManager.onAnswer(sender, message.signedContent(), sender.level().getServer().getTickCount()));
 
 		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
-				VocabCraftCommand.register(dispatcher, challengeManager, config));
+				VocabCraftCommand.register(dispatcher, challengeManager, config, vocab));
 
-		LOGGER.info("Vocab Craft loaded ({} item names)", itemDictionary.entries().size());
+		LOGGER.info("Vocab Craft loaded ({} item names, {} decks: {} words)", itemDictionary.entries().size(),
+				vocab.decks().size(), vocab.decks().stream().mapToInt(deck -> deck.words().size()).sum());
 	}
 
 	/** Typos in items_curated.json would silently never match, so report them at startup. */

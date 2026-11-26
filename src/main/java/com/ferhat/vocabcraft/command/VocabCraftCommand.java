@@ -4,9 +4,12 @@ import com.ferhat.vocabcraft.challenge.ChallengeManager;
 import com.ferhat.vocabcraft.challenge.ChallengeType;
 import com.ferhat.vocabcraft.config.VocabCraftConfig;
 import com.ferhat.vocabcraft.penalty.ItemPenaltyMode;
+import com.ferhat.vocabcraft.vocab.Deck;
+import com.ferhat.vocabcraft.vocab.VocabRepository;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.BoolArgumentType;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
+import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
@@ -14,7 +17,14 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.level.ServerPlayer;
+
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Set;
 
 import static com.ferhat.vocabcraft.config.VocabCraftConfig.MAX_INTERVAL_LIMIT;
 import static com.ferhat.vocabcraft.config.VocabCraftConfig.MAX_TIME_LIMIT;
@@ -34,6 +44,9 @@ import static com.ferhat.vocabcraft.config.VocabCraftConfig.MIN_TIME_LIMIT;
  * /vocabcraft config showKana &lt;true|false&gt; show kana next to kanji
  * /vocabcraft config weights &lt;item&gt; &lt;vocab&gt; relative chance of item vs vocab challenges
  * /vocabcraft config itemPenalty one|stack|all  how much of the item is lost
+ * /vocabcraft config levels n5 n4         JLPT levels to be quizzed on
+ * /vocabcraft config decks &lt;id&gt; ...       decks to be quizzed on (bundled or custom)
+ * /vocabcraft decks                        list available decks
  * </pre>
  * Changes are saved to config/vocabcraft/config.json immediately.
  */
@@ -42,12 +55,13 @@ public final class VocabCraftCommand {
 	}
 
 	public static void register(CommandDispatcher<CommandSourceStack> dispatcher,
-								ChallengeManager manager, VocabCraftConfig config) {
+								ChallengeManager manager, VocabCraftConfig config, VocabRepository vocab) {
 		dispatcher.register(Commands.literal("vocabcraft")
 				.requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
 				.then(Commands.literal("trigger").executes(ctx -> trigger(ctx, manager, null)))
 				.then(Commands.literal("item").executes(ctx -> trigger(ctx, manager, ChallengeType.ITEM)))
 				.then(Commands.literal("vocab").executes(ctx -> trigger(ctx, manager, ChallengeType.VOCAB)))
+				.then(Commands.literal("decks").executes(ctx -> listDecks(ctx, config, vocab)))
 				.then(Commands.literal("config")
 						.executes(ctx -> show(ctx, config))
 						.then(Commands.literal("interval")
@@ -81,7 +95,58 @@ public final class VocabCraftCommand {
 						.then(Commands.literal("itemPenalty")
 								.then(itemPenalty("one", ItemPenaltyMode.ONE, config))
 								.then(itemPenalty("stack", ItemPenaltyMode.STACK, config))
-								.then(itemPenalty("all", ItemPenaltyMode.ALL_OF_TYPE, config)))));
+								.then(itemPenalty("all", ItemPenaltyMode.ALL_OF_TYPE, config)))
+						.then(Commands.literal("levels")
+								.then(Commands.argument("levels", StringArgumentType.greedyString())
+										.executes(ctx -> setLevels(ctx, config, vocab, StringArgumentType.getString(ctx, "levels")))))
+						.then(Commands.literal("decks")
+								.then(Commands.argument("decks", StringArgumentType.greedyString())
+										.executes(ctx -> setDecks(ctx, config, vocab, StringArgumentType.getString(ctx, "decks")))))));
+	}
+
+	/** "n5 n4", "N5,N4" or "5 4" → [jlpt_n5, jlpt_n4]. */
+	private static int setLevels(CommandContext<CommandSourceStack> ctx, VocabCraftConfig config, VocabRepository vocab,
+								 String input) {
+		Set<String> ids = new LinkedHashSet<>();
+		for (String token : input.toLowerCase(Locale.ROOT).strip().split("[\\s,]+")) {
+			String level = token.replaceFirst("^(jlpt_)?n?", "");
+			if (!level.matches("[1-5]")) {
+				ctx.getSource().sendFailure(Component.literal("Unknown level '" + token + "'. Use n5, n4, n3, n2 or n1."));
+				return 0;
+			}
+			ids.add("jlpt_n" + level);
+		}
+		return applyDecks(ctx, config, vocab, ids);
+	}
+
+	private static int setDecks(CommandContext<CommandSourceStack> ctx, VocabCraftConfig config, VocabRepository vocab,
+								String input) {
+		Set<String> ids = new LinkedHashSet<>(List.of(input.strip().split("[\\s,]+")));
+		for (String id : ids) {
+			if (vocab.deck(id).isEmpty()) {
+				ctx.getSource().sendFailure(Component.literal("Unknown deck '" + id + "'. See /vocabcraft decks."));
+				return 0;
+			}
+		}
+		return applyDecks(ctx, config, vocab, ids);
+	}
+
+	private static int applyDecks(CommandContext<CommandSourceStack> ctx, VocabCraftConfig config, VocabRepository vocab,
+								  Set<String> ids) {
+		config.enabledDecks = new ArrayList<>(ids);
+		int words = ids.stream().mapToInt(id -> vocab.deck(id).map(deck -> deck.words().size()).orElse(0)).sum();
+		return saved(ctx, config, "Decks set to " + String.join(", ", ids) + " (" + words + " words)");
+	}
+
+	private static int listDecks(CommandContext<CommandSourceStack> ctx, VocabCraftConfig config, VocabRepository vocab) {
+		MutableComponent message = Component.literal("Available decks:").withStyle(ChatFormatting.AQUA);
+		for (Deck deck : vocab.decks()) {
+			boolean enabled = config.enabledDecks.contains(deck.id());
+			message.append(Component.literal("\n  " + (enabled ? "✓ " : "   ") + deck.id() + " — " + deck.title()
+					+ " (" + deck.words().size() + " words)").withStyle(enabled ? ChatFormatting.GREEN : ChatFormatting.GRAY));
+		}
+		ctx.getSource().sendSuccess(() -> message, false);
+		return 1;
 	}
 
 	private static LiteralArgumentBuilder<CommandSourceStack> itemPenalty(String name, ItemPenaltyMode mode,
@@ -116,6 +181,10 @@ public final class VocabCraftCommand {
 				source.sendFailure(Component.literal("No item in your inventory has a Japanese name yet."));
 				yield 0;
 			}
+			case NO_WORDS -> {
+				source.sendFailure(Component.literal("The enabled decks have no words. See /vocabcraft decks."));
+				yield 0;
+			}
 		};
 	}
 
@@ -140,7 +209,13 @@ public final class VocabCraftCommand {
 		ctx.getSource().sendSuccess(() -> Component.literal("Vocab Craft settings:").withStyle(ChatFormatting.AQUA)
 				.append(Component.literal("\n  interval: " + interval).withStyle(ChatFormatting.GRAY))
 				.append(Component.literal("\n  timeLimit: " + config.timeLimitSeconds + "s").withStyle(ChatFormatting.GRAY))
-				.append(Component.literal("\n  showKana: " + config.showKanaHint).withStyle(ChatFormatting.GRAY)), false);
+				.append(Component.literal("\n  showKana: " + config.showKanaHint).withStyle(ChatFormatting.GRAY))
+				.append(Component.literal("\n  weights: item " + config.itemChallengeWeight
+						+ " / vocab " + config.vocabChallengeWeight).withStyle(ChatFormatting.GRAY))
+				.append(Component.literal("\n  itemPenalty: " + config.itemPenaltyMode.name().toLowerCase(Locale.ROOT))
+						.withStyle(ChatFormatting.GRAY))
+				.append(Component.literal("\n  decks: " + String.join(", ", config.enabledDecks))
+						.withStyle(ChatFormatting.GRAY)), false);
 		return 1;
 	}
 

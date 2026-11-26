@@ -12,6 +12,8 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Mod settings, stored in config/vocabcraft/config.json and editable with /vocabcraft config.
@@ -31,6 +33,7 @@ public final class VocabCraftConfig {
 	public static final int MIN_TIME_LIMIT = 3;
 	public static final int MAX_TIME_LIMIT = 120;
 	public static final int MAX_WEIGHT = 1000;
+	public static final List<String> DEFAULT_DECKS = List.of("jlpt_n5");
 
 	private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
@@ -56,6 +59,9 @@ public final class VocabCraftConfig {
 
 	/** How much of the item is lost on a failed item challenge. */
 	public ItemPenaltyMode itemPenaltyMode = ItemPenaltyMode.STACK;
+
+	/** Decks vocab challenges are drawn from: bundled "jlpt_n5".."jlpt_n1" or custom deck ids. */
+	public List<String> enabledDecks = new ArrayList<>(DEFAULT_DECKS);
 
 	private transient Path path;
 
@@ -105,6 +111,9 @@ public final class VocabCraftConfig {
 		}
 		if (itemPenaltyMode == null) {
 			itemPenaltyMode = ItemPenaltyMode.STACK;
+		}
+		if (enabledDecks == null || enabledDecks.isEmpty()) {
+			enabledDecks = new ArrayList<>(DEFAULT_DECKS);
 		}
 	}
 

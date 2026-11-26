@@ -300,8 +300,8 @@ For **English answers** (JP→EN):
 ### Phase 3 — Real data & matching (2–3 days)
 - [ ] `VocabEntry` + `VocabRepository` (JSON decks, copied to config folder)
 - [ ] Write starter decks: ~50 verbs, ~30 adjectives, ~50 nouns (N5)
-- [ ] `KanaConverter` + `AnswerMatcher` with unit tests
-- [ ] Both directions (EN→JP, JP→EN)
+- [x] `KanaConverter` + `AnswerMatcher` with unit tests
+- [x] Both directions (EN→JP, JP→EN)
 - [ ] Custom damage type `vocabcraft:quiz_fail` + death message + bypass armor tag
 - [ ] Python script → `items_vanilla_ja.json`; `easy`/`hard` difficulty
 - **Done when:** `taberu`, `たべる`, `タベル`, `食べる` all pass; armor doesn't reduce damage.

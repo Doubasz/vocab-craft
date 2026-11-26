@@ -31,26 +31,33 @@ public record Challenge(VocabEntry entry, Direction direction, long deadlineTick
 		};
 	}
 
-	/**
-	 * EN→JP: romaji, kana or kanji.
-	 * JP→EN: the English meaning, or the reading in romaji or kana (e.g. 食べる → "to eat" or "taberu").
-	 */
-	public List<String> acceptedAnswers() {
-		List<String> answers = new ArrayList<>(entry.romaji());
-		answers.add(entry.kana());
-		switch (direction) {
-			case EN_TO_JP -> {
-				if (entry.kanji() != null) {
-					answers.add(entry.kanji());
-				}
-			}
-			case JP_TO_EN -> answers.addAll(entry.en());
-		}
-		return answers;
+	/** The reading: romaji and kana. */
+	public List<String> readingForms() {
+		List<String> forms = new ArrayList<>(entry.romaji());
+		forms.add(entry.kana());
+		return forms;
 	}
 
+	/** Every Japanese spelling: romaji, kana and kanji. */
+	public List<String> japaneseForms() {
+		List<String> forms = readingForms();
+		if (entry.kanji() != null) {
+			forms.add(entry.kanji());
+		}
+		return forms;
+	}
+
+	/**
+	 * EN→JP: any Japanese spelling (taberu, たべる, タベル, 食べる).
+	 * JP→EN: the English meaning, or the reading in romaji or kana (食べる → "to eat", "eat" or "taberu").
+	 * Not the kanji, which would just be copying the prompt.
+	 */
 	public boolean isCorrect(String answer) {
-		return AnswerMatcher.matches(answer, acceptedAnswers());
+		return switch (direction) {
+			case EN_TO_JP -> AnswerMatcher.matchesJapanese(answer, japaneseForms());
+			case JP_TO_EN -> AnswerMatcher.matchesEnglish(answer, entry.en())
+					|| AnswerMatcher.matchesJapanese(answer, readingForms());
+		};
 	}
 
 	/** Full answer shown after the challenge, e.g. "食べる = taberu / to eat". */

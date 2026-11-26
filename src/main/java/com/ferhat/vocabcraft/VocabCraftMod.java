@@ -29,17 +29,18 @@ public class VocabCraftMod implements ModInitializer {
 	public void onInitialize() {
 		Path configDir = FabricLoader.getInstance().getConfigDir().resolve(MOD_ID);
 		VocabCraftConfig config = VocabCraftConfig.load(configDir.resolve("config.json"));
-		ItemDictionary itemDictionary = ItemDictionary.loadCurated();
+		ItemDictionary curatedItems = ItemDictionary.loadCurated();
+		ItemDictionary allItems = ItemDictionary.loadAll();
 		VocabRepository vocab = VocabRepository.load(configDir.resolve("decks"));
 		vocab.errors().forEach(error -> LOGGER.error("Deck not loaded: {}", error));
 		config.enabledDecks.stream()
 				.filter(id -> vocab.deck(id).isEmpty())
 				.forEach(id -> LOGGER.warn("Unknown deck in config: {}", id));
 		ChallengeManager challengeManager = new ChallengeManager(
-				config, new ChallengeScheduler(config), new ItemChallengeFactory(itemDictionary), vocab);
+				config, new ChallengeScheduler(config), new ItemChallengeFactory(config, curatedItems, allItems), vocab);
 
 		VocabCraftNetworking.registerPayloads();
-		warnUnknownItems(itemDictionary);
+		warnUnknownItems(curatedItems);
 
 		ServerTickEvents.END_SERVER_TICK.register(challengeManager::tick);
 
@@ -55,7 +56,7 @@ public class VocabCraftMod implements ModInitializer {
 		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
 				VocabCraftCommand.register(dispatcher, challengeManager, config, vocab));
 
-		LOGGER.info("Vocab Craft loaded ({} item names, {} decks: {} words)", itemDictionary.entries().size(),
+		LOGGER.info("Vocab Craft loaded ({} item names, {} decks: {} words)", allItems.entries().size(),
 				vocab.decks().size(), vocab.decks().stream().mapToInt(deck -> deck.words().size()).sum());
 	}
 

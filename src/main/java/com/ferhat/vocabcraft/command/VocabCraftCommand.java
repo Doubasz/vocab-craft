@@ -5,6 +5,7 @@ import com.ferhat.vocabcraft.challenge.ChallengeType;
 import com.ferhat.vocabcraft.config.VocabCraftConfig;
 import com.ferhat.vocabcraft.penalty.ItemPenaltyMode;
 import com.ferhat.vocabcraft.vocab.Deck;
+import com.ferhat.vocabcraft.vocab.ItemNames;
 import com.ferhat.vocabcraft.vocab.VocabRepository;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.BoolArgumentType;
@@ -44,6 +45,7 @@ import static com.ferhat.vocabcraft.config.VocabCraftConfig.MIN_TIME_LIMIT;
  * /vocabcraft config showKana &lt;true|false&gt; show kana next to kanji
  * /vocabcraft config weights &lt;item&gt; &lt;vocab&gt; relative chance of item vs vocab challenges
  * /vocabcraft config itemPenalty one|stack|all  how much of the item is lost
+ * /vocabcraft config itemNames all|curated  every item, or ~40 easy ones
  * /vocabcraft config levels n5 n4         JLPT levels to be quizzed on
  * /vocabcraft config decks &lt;id&gt; ...       decks to be quizzed on (bundled or custom)
  * /vocabcraft decks                        list available decks
@@ -96,6 +98,9 @@ public final class VocabCraftCommand {
 								.then(itemPenalty("one", ItemPenaltyMode.ONE, config))
 								.then(itemPenalty("stack", ItemPenaltyMode.STACK, config))
 								.then(itemPenalty("all", ItemPenaltyMode.ALL_OF_TYPE, config)))
+						.then(Commands.literal("itemNames")
+								.then(itemNames("all", ItemNames.ALL, config))
+								.then(itemNames("curated", ItemNames.CURATED, config)))
 						.then(Commands.literal("levels")
 								.then(Commands.argument("levels", StringArgumentType.greedyString())
 										.executes(ctx -> setLevels(ctx, config, vocab, StringArgumentType.getString(ctx, "levels")))))
@@ -157,6 +162,14 @@ public final class VocabCraftCommand {
 		});
 	}
 
+	private static LiteralArgumentBuilder<CommandSourceStack> itemNames(String name, ItemNames names,
+																		 VocabCraftConfig config) {
+		return Commands.literal(name).executes(ctx -> {
+			config.itemNames = names;
+			return saved(ctx, config, "Item names set to " + name);
+		});
+	}
+
 	private static int setWeights(CommandContext<CommandSourceStack> ctx, VocabCraftConfig config, int item, int vocab) {
 		if (item + vocab == 0) {
 			ctx.getSource().sendFailure(Component.literal("At least one weight must be above 0"));
@@ -213,6 +226,8 @@ public final class VocabCraftCommand {
 				.append(Component.literal("\n  weights: item " + config.itemChallengeWeight
 						+ " / vocab " + config.vocabChallengeWeight).withStyle(ChatFormatting.GRAY))
 				.append(Component.literal("\n  itemPenalty: " + config.itemPenaltyMode.name().toLowerCase(Locale.ROOT))
+						.withStyle(ChatFormatting.GRAY))
+				.append(Component.literal("\n  itemNames: " + config.itemNames.name().toLowerCase(Locale.ROOT))
 						.withStyle(ChatFormatting.GRAY))
 				.append(Component.literal("\n  decks: " + String.join(", ", config.enabledDecks))
 						.withStyle(ChatFormatting.GRAY)), false);

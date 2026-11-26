@@ -303,7 +303,7 @@ For **English answers** (JP→EN):
 - [x] `KanaConverter` + `AnswerMatcher` with unit tests
 - [x] Both directions (EN→JP, JP→EN)
 - [ ] Custom damage type `vocabcraft:quiz_fail` + death message + bypass armor tag
-- [ ] Python script → `items_vanilla_ja.json`; `easy`/`hard` difficulty
+- [x] Python script → `items_vanilla.json` (1841 items); `/vocabcraft config itemNames all|curated`
 - **Done when:** `taberu`, `たべる`, `タベル`, `食べる` all pass; armor doesn't reduce damage.
 
 ### Phase 4 — Proper UI with packets (2–3 days)

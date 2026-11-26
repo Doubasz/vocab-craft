@@ -169,6 +169,11 @@ public final class KanaConverter {
 				i++;
 				continue;
 			}
+			if (c == '・') {
+				out.append(' ');  // ジャック・オ・ランタン → jakku o rantan
+				i++;
+				continue;
+			}
 			if (c == 'ー') {
 				char vowel = lastVowel(out);
 				if (vowel != 0) {

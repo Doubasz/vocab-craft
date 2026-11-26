@@ -2,6 +2,7 @@ package com.ferhat.vocabcraft.config;
 
 import com.ferhat.vocabcraft.VocabCraftMod;
 import com.ferhat.vocabcraft.penalty.ItemPenaltyMode;
+import com.ferhat.vocabcraft.vocab.ItemNames;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParseException;
@@ -60,6 +61,9 @@ public final class VocabCraftConfig {
 	/** How much of the item is lost on a failed item challenge. */
 	public ItemPenaltyMode itemPenaltyMode = ItemPenaltyMode.STACK;
 
+	/** Which items can be asked about: CURATED (~40 easy names) or ALL (every item, game names). */
+	public ItemNames itemNames = ItemNames.ALL;
+
 	/** Decks vocab challenges are drawn from: bundled "jlpt_n5".."jlpt_n1" or custom deck ids. */
 	public List<String> enabledDecks = new ArrayList<>(DEFAULT_DECKS);
 
@@ -111,6 +115,9 @@ public final class VocabCraftConfig {
 		}
 		if (itemPenaltyMode == null) {
 			itemPenaltyMode = ItemPenaltyMode.STACK;
+		}
+		if (itemNames == null) {
+			itemNames = ItemNames.ALL;
 		}
 		if (enabledDecks == null || enabledDecks.isEmpty()) {
 			enabledDecks = new ArrayList<>(DEFAULT_DECKS);
